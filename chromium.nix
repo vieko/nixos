@@ -1,15 +1,12 @@
-{ ... }:
+{ pkgs, ... }:
 
-let
-  ext = {
-    dark-reader        = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
-    toggl-track        = "oejgccbfbmkkpaidnkphaiaecficdnfn";
-    picture-in-picture = "hkgfoiooedgoejojocmhlaklaeopbecg";
-  };
-in
-  {
-    programs.chromium = {
-      enable     = true;
-      extensions = builtins.attrValues ext;
+{
+  programs.google-chrome = {
+    enable     = true;
+    extensions = {
+      dark-reader        = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
+      toggl-track        = "oejgccbfbmkkpaidnkphaiaecficdnfn";
+      picture-in-picture = "hkgfoiooedgoejojocmhlaklaeopbecg";
     };
-  }
+  };
+}

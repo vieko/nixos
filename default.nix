@@ -1,120 +1,104 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 
-{
-  nix = {
-    autoOptimiseStore = true;
-    gc = {
-      automatic = true;
-      dates     = "weekly";
-      options   = "--delete-older-than 7d";
-    };
-    extraOptions = ''
-      keep-outputs     = true
-      keep-derivations = true
-      experimental-features = nix-command flakes
-    '';
-    package = pkgs.nixFlakes;
-  };
-
+let
+  hostName = "pandemonium";
+in {
   imports = [ 
       <home-manager/nixos>
 
       ./hardware.nix
+
+      ./calgary.nix
+      ./config.nix
+      ./gnome.nix
+
       ./virtualization.nix
-      ./chromium.nix
+      #./chromium.nix
     ];
-  
-  # Allow Slack, Firefox Developer Edition, etc.
-  nixpkgs.config.allowUnfree = true;
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  networking = {
-    hostName = "pandemonium";
-    networkmanager.enable = true;
-    wireless.enable = false;
-    useDHCP = false;
-    bridges.br0 = {
-      interfaces = [ "eno2" ];
+  # +> BOOT
+  boot = {
+    cleanTmpDir = true;
+    loader = {
+      systemd-boot.enable      = true;
+      efi.canTouchEfiVariables = true;
     };
-    interfaces = {
-      br0.useDHCP = true;
-      eno2.useDHCP = true;
-      wlo1.useDHCP = true;
-    };
+    plymouth.enable = false;
   };
 
-  # Set your time zone.
-  time.timeZone = "America/Edmonton";
+  # +> NETWORKING
+  networking = {
+    inherit hostName;
+    networkmanager.enable = true;
+    #wireless.networks = ./private-config/wifi.nix;
+    firewall.enable = false;
+    useDHCP = false;
+    interfaces = {
+    #  br0.useDHCP = true;
+    #  eno2.useDHCP = true;
+      wlo1.useDHCP = true;
+    };
+    #bridges.br0 = {
+    #  interfaces = [ "eno2" ];
+    #};
+  };
 
+  # +> SERVICES
+  services.openssh.enable = true;
+  
   environment.systemPackages = with pkgs; [
     # defaults
     coreutils
-    git
     bc
     killall
     unzip
-    wget 
     neovim
     gnumake
-    gnome3.gnome-tweak-tool
     # VGA Passthrough
     pciutils
-    gnome3.networkmanagerapplet
     virt-manager
     hwloc
     # Looking Glass Dependencies
     # nix-shell -p gcc cmake gnumake pkg-config binutils freefont_ttf SDL2 SDL2_ttf spice-protocol fontconfig xorg.libX11 nettle
     # Apps
-    google-chrome
     firefox-devedition-bin
     slack
     discord
-
-    xst
   ];
 
-  home-manager.users.vieko = { pkgs, ... }: {
+  # +>  HOME MANAGER
+  home-manager.users.vieko = (import ./home.nix {
+    inherit pkgs config hostName;
+    home.packages = [
+      pkgs.google-chrome
+    ];
     programs.neovim = {
       enable  = true;
       plugins = with pkgs.vimPlugins; [vim-nix];
     };
-  };
-
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+    programs.google-chrome = {
+      enable     = true;
+      extensions = builtins.attrValues {
+        dark-reader        = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
+        toggl-track        = "oejgccbfbmkkpaidnkphaiaecficdnfn";
+        picture-in-picture = "hkgfoiooedgoejojocmhlaklaeopbecg";
+      };
+    };
+  });
 
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # Enable GNOME Desktop Environment.
-  services = {
-    xserver =  {
-      enable = true;
-      layout = "us";
-      displayManager = {
-        gdm.enable = true;
-        gdm.wayland = false; 
-	sessionCommands = ''
-	  # fixes issue with Looking Glass
-	  export SDL_VIDEO_X11_VISUALID=
-	'';
-      };
-      desktopManager.gnome3.enable = true;
-    };
-    dbus.packages = [ pkgs.gnome3.dconf ];
-    udev.packages = [ pkgs.gnome3.gnome-settings-daemon ];
-  };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # +> USERS
   users.users.vieko = {
     isNormalUser = true;
     uid = 1000;
     extraGroups = [ "wheel" "networkmanager" "kvm" "libvirt" "plugdev" ]; # Enable ‘sudo’ for the user.
+    #shell = pkgs.zsh;
+    #openssh.authorizationKeys.keys = [
+    #  (builtins.readFile ../private-config/ssh/id_rsa.pub)
+    #];
   };
 
   system.stateVersion = "20.09";
