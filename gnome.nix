@@ -21,8 +21,8 @@
     dbus.packages = [ pkgs.gnome3.dconf ];
     udev.packages = [ pkgs.gnome3.gnome-settings-daemon ];
   };
-
   environment.systemPackages = with pkgs; [
+    gnome3.gnome-shell-extensions
     gnome3.networkmanagerapplet
     gnome3.gnome-tweaks
     ant-dracula-theme

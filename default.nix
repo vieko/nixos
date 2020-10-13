@@ -52,7 +52,6 @@ in {
     bc
     killall
     unzip
-    neovim
     gnumake
     # VGA Passthrough
     pciutils
@@ -74,7 +73,10 @@ in {
     ];
     programs.neovim = {
       enable  = true;
-      plugins = with pkgs.vimPlugins; [vim-nix];
+      plugins = with pkgs.vimPlugins; [vim-nix dracula-vim];
+      configure = {
+        customRC = builtins.readFile ./config.vim;
+      };
     };
     programs.google-chrome = {
       enable     = true;
