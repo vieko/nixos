@@ -5,7 +5,6 @@ let
     ./git.nix
     #./zsh.nix
     ./tmux.nix
-    ./neovim.nix
   ];
   devImports = [
     #./keybase.nix
@@ -30,11 +29,13 @@ in {
     htop
     ytop
     tldr
+    tree
     unzip
     killall
+    neofetch
 
     # EDITOR
-    #(callPackage ./editor {})
+    (callPackage ./editor {})
     nodejs
 
     # DEV TOOLS
