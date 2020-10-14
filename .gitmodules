@@ -1,0 +1,3 @@
+[submodule "dracula/tmux"]
+	path = dracula/tmux
+	url = https://github.com/dracula/tmux.git

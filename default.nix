@@ -1,22 +1,24 @@
 { config, pkgs, ... }:
 
-let
-  hostName = "pandemonium";
-in {
+{
   imports = [ 
-      <home-manager/nixos>
+    <home-manager/nixos>
 
-      ./hardware.nix
-      ./config.nix
-      ./calgary.nix
-      ./windows.nix
+    ./hardware.nix
+    ./config.nix
+    ./calgary.nix
+    ./windows.nix
 
-      ./gnome.nix
-      #./tmux.nix
-      #./fonts.nix
+    ./gnome.nix
+    #./fonts.nix
 
-      ./chromium.nix
-    ];
+    ./chromium.nix
+  ];
+
+  # +> HOME MANAGER
+  home-manager.users.vieko = (import ./home.nix {
+    inherit pkgs config;
+  });
 
   # +> BOOT
   boot = {
@@ -30,19 +32,19 @@ in {
 
   # +> NETWORKING
   networking = {
-    inherit hostName;
+    hostName = "pandemonium";
     networkmanager.enable = true;
     #wireless.networks = ./private-config/wifi.nix;
     firewall.enable = false;
     useDHCP = false;
     interfaces = {
-    #  br0.useDHCP = true;
-    #  eno2.useDHCP = true;
+      br0.useDHCP = true;
+      eno2.useDHCP = true;
       wlo1.useDHCP = true;
     };
-    #bridges.br0 = {
-    #  interfaces = [ "eno2" ];
-    #};
+    bridges.br0 = {
+      interfaces = [ "eno2" ];
+    };
   };
 
   # +> SERVICES
@@ -58,10 +60,6 @@ in {
 
   ];
 
-  # +> HOME MANAGER
-  home-manager.users.vieko = (import ./home.nix {
-    inherit pkgs config hostName;
-  });
 
   # +> USERS
   users.users.vieko = {

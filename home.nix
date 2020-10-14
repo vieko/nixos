@@ -4,6 +4,8 @@ let
   baseImports = [
     ./git.nix
     #./zsh.nix
+    ./tmux.nix
+    ./neovim.nix
   ];
   devImports = [
     #./keybase.nix
@@ -39,11 +41,6 @@ in {
     coreutils
     gnumake
   ];
-    programs.neovim = {
-      enable  = true;
-      plugins = with pkgs.vimPlugins; [vim-nix dracula-vim];
-      extraConfig = builtins.readFile ./config.vim;
-    };
 
   home.sessionVariables = {
     EDITOR = "nvim";
