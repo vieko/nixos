@@ -1,12 +1,16 @@
 { pkgs, ... }:
 
 {
-  programs.google-chrome = {
+  programs.chromium = {
     enable     = true;
-    extensions = {
+    extensions = builtins.attrValues {
       dark-reader        = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
       toggl-track        = "oejgccbfbmkkpaidnkphaiaecficdnfn";
       picture-in-picture = "hkgfoiooedgoejojocmhlaklaeopbecg";
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    chromium
+  ];
 }

@@ -1,3 +1,3 @@
 set rnu
 
-colorscheme dracula
+

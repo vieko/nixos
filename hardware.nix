@@ -39,4 +39,8 @@
 
   # +> DRIVERS
   hardware.openrazer.enable = true;
+
+  # +> SOUND
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 }
