@@ -1,34 +1,13 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports = [ 
     <home-manager/nixos>
-
     ./hardware.nix
-    ./config.nix
-    ./calgary.nix
     ./windows.nix
-
     ./gnome.nix
-    #./fonts.nix
-
-    ./chromium.nix
   ];
 
-  # +> HOME MANAGER
-  home-manager.users.vieko = (import ./home.nix {
-    inherit pkgs config;
-  });
-
-  # +> BOOT
-  boot = {
-    cleanTmpDir = true;
-    loader = {
-      systemd-boot.enable      = true;
-      efi.canTouchEfiVariables = true;
-    };
-    plymouth.enable = false;
-  };
 
   # +> NETWORKING
   networking = {
@@ -47,19 +26,24 @@
     };
   };
 
-  # +> SERVICES
-  services.openssh.enable = true;
-  
+  # +> LOCALIZATION
+  i18n.defaultLocale = "en_US.UTF-8";
+  time.timeZone = "America/Edmonton";
+
   # +> PACKAGES
   environment.systemPackages = with pkgs; [
-
-    # Apps
-    firefox-devedition-bin
-    slack
-    discord
-
+    wget
+    unzip
+    nix-doc
   ];
 
+  # +> HOME MANAGER
+  home-manager.users.vieko = (import ./home.nix {
+    inherit config pkgs;
+  });
+
+  # +> SERVICES
+  services.openssh.enable = true;
 
   # +> USERS
   users.users.vieko = {
@@ -71,6 +55,20 @@
     #  (builtins.readFile ../private-config/ssh/id_rsa.pub)
     #];
   };
+
+  # +> CONFIG
+  nix = {
+    autoOptimiseStore = true;
+    gc = {
+      automatic = true;
+      dates     = "weekly";
+      options   = "--delete-older-than 7d";
+    };
+    package = pkgs.nixFlakes;
+    trustedUsers = [ "root" "vieko" ];
+    extraOptions = lib.optionalString (config.nix.package == pkgs.nixFlakes) "experimental-features = nix-command flakes";
+  };
+  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "20.09";
 

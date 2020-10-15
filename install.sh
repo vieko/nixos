@@ -20,7 +20,7 @@ sudo nix-channel --update
 sudo nixos-generate-config --force
 echo "import /etc/dotfiles" | sudo tee /etc/nixos/configuration.nix
 
-sudo nixos-rebuild switch --show-trace
+sudo nixos-rebuild switch
 
 
 

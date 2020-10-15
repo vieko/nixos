@@ -1,0 +1,107 @@
+{
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "javascript",
+    "javascript.jsx",
+    "javascriptreact",
+    "typescript",
+    "typescript.tsx",
+    "typescriptreact",
+    "json",
+    "graphql"
+  ],
+  "coc.preferences.hoverTarget": "float",
+  "coc.preferences.enableFloatHighlight": false,
+  "coc.preferences.currentFunctionSymbolAutoUpdate": false,
+
+  "coc.source.around.firstMatch": false,
+  "coc.source.buffer.firstMatch": false,
+
+  "yank.highlight.duration": 100,
+  "yank.highlight.enable": true,
+
+  "list.indicator": "⚡",
+  "list.previewSplitRight": true,
+
+  "list.source.grep.command": "rg",
+  "list.source.grep.defaultOptions": ["--number-select"],
+  "list.source.files.defaultOptions": ["--number-select"],
+  "list.source.mru.defaultOptions": ["--number-select"],
+  "list.source.mru.maxLength": 50,
+  "list.source.mru.ignoreGitIgnore": true,
+
+  "list.normalMappings": {
+    "<C-n>": "normal:j",
+    "<C-p>": "normal:k",
+    "<C-c>": "do:exit"
+  },
+
+  "list.insertMappings": {
+    "<C-n>": "normal:j",
+    "<C-p>": "normal:k",
+    "<C-c>": "do:exit"
+  },
+
+  "git.addedSign.text": "+",
+  "git.changedSign.text": "~",
+  "git.removedSign.text": "-",
+  "git.topRemovedSign.text": "⌐",
+  "git.changeRemovedSign.text": "¬",
+  "git.enableGutters": true,
+  "git.realtimeGutters": true,
+  "git.addedSign.hlGroup": "GruvboxGreenSign",
+  "git.changedSign.hlGroup": "GruvboxYellowSign",
+  "git.removedSign.hlGroup": "GruvboxRedSign",
+  "git.topRemovedSign.hlGroup": "GruvboxRedSign",
+  "git.changeRemovedSign.hlGroup": "GruvboxRedSign",
+
+  "signature.enable": false,
+
+  "diagnostic.level": "information",
+  "diagnostic.infoSign": "··",
+  "diagnostic.hintSign": "~~",
+  "diagnostic.warningSign": "››",
+  "diagnostic.errorSign": "××",
+  "diagnostic.enableSign": true,
+  "diagnostic.enable": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.enableMessage": "never",
+  "diagnostic.messageTarget": "echo",
+  "diagnostic.refreshAfterSave": false,
+  "diagnostic.refreshOnInsertMode": false,
+
+  "suggest.floatEnable": false,
+  "suggest.enablePreview": false,
+  "suggest.autoTrigger": "trigger",
+  "suggest.detailField": "menu",
+  "suggest.minTriggerInputLength": 3,
+  "suggest.maxCompleteItemCount": 50,
+  "suggest.maxPreviewWidth": 80,
+  "suggest.triggerAfterInsertEnter": false,
+  "suggest.labelMaxLength": 200,
+  "suggest.detailMaxLength": 100,
+  "suggest.echodocSupport": false,
+  "suggest.completionItemKindLabels": {},
+
+  "tabnine.priority": 100,
+
+  "prettier.statusItemText": "Prettier",
+  "prettier.disableSuccessMessage": true,
+
+  "eslint.enable": true,
+  "eslint.autoFix": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact", "typescript", "typescriptreact", "typescript.tsx"],
+
+  "tsserver.trace.server": "messages",
+  "tsserver.formatOnType": true,
+
+  "typescript.suggest.enabled": false,
+  "typescript.suggestionActions.enabled": false,
+
+  "javascript.suggest.enabled": false,
+  "javascript.suggest.autoImports": true,
+  "javascript.suggestionActions.enabled": false
+}

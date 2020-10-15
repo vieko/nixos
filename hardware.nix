@@ -5,6 +5,10 @@
 
   # +> BOOT
   boot = {
+    loader = {
+      systemd-boot.enable      = true;
+      efi.canTouchEfiVariables = true;
+    };
     initrd = {
       availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" ];
       kernelModules = [];
@@ -14,6 +18,8 @@
     extraModulePackages = [];
     extraModprobeConfig = ''options kvm ignore_msrs=1'';
     blacklistedKernelModules = [ "nvidia" "nouveau" ];
+    cleanTmpDir = true;
+    plymouth.enable = false;
   };
 
   # +> CPU
