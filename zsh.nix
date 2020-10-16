@@ -18,6 +18,9 @@
       ZSH_CACHE   = "$XDG_CACHE_HOME/zsh";
       ZGEN_DIR    = "$XDG_DATA_HOME/zsh";
       ZGEN_SOURCE = "$ZGEN_DIR/zgen.zsh";
+      TMUX_HOME = "$XDG_CONFIG_HOME/tmux";
+      TMUXIFIER = "$XDG_DATA_HOME/tmuxifier";
+      TMUXIFIER_LAYOUT_PATH = "$XDG_DATA_HOME/tmuxifier";
     };
   };
 }
