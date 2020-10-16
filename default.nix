@@ -50,7 +50,7 @@
     isNormalUser = true;
     uid = 1000;
     extraGroups = [ "wheel" "networkmanager" "kvm" "libvirt" "plugdev" ];
-    #shell = pkgs.zsh;
+    shell = pkgs.zsh;
     #openssh.authorizationKeys.keys = [
     #  (builtins.readFile ../private-config/ssh/id_rsa.pub)
     #];
@@ -64,9 +64,9 @@
       dates     = "weekly";
       options   = "--delete-older-than 7d";
     };
-    package = pkgs.nixFlakes;
     trustedUsers = [ "root" "vieko" ];
-    extraOptions = lib.optionalString (config.nix.package == pkgs.nixFlakes) "experimental-features = nix-command flakes";
+    #package = pkgs.nixFlakes;
+    #extraOptions = "experimental-features = nix-command flakes";
   };
   nixpkgs.config.allowUnfree = true;
 

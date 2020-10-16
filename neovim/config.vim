@@ -121,13 +121,15 @@ let &colorcolumn=join(range(81,999),",")
 " ---------------
 " let &t_8f='u;%lu;%lum'
 " let &t_8b='u;%lu;%lum'
-
 set background=dark
 " let g:gruvbox_bold=0
 " let g:gruvbox_italic=0
 " let g:gruvbox_invert_selection=0
 " let g:gruvbox_contrast_dark='medium'
+"
 " colorscheme gruvbox
+let g:dracula_colorterm = 0
+let g:dracula_italic = 0
 colorscheme dracula
 
 " Section: Functions

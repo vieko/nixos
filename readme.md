@@ -1,10 +1,14 @@
 ## TODO
 
-- slack
-- discord
+- FIX disappearing cursor issue on Gnome Terminal
 - office
-- tmux
-- neovim
-- zsh
-
-- ADD dconfs
+- razer
+- add profile photo
+- add wallpaper
+- gpg key
+- bring back pem keys
+- dconfs
+- git on neovim
+- add secrets, passwords, etc
+- add looking glass to path (checkout R2?)
+- migrate to flakes

@@ -2,24 +2,32 @@
 
 let
   defaultPkgs = with pkgs; [
-    fd
-    # exa
     htop
     ytop
-    tldr
     tree
     xclip
     killall
     ripgrep
     neofetch
-    # prettyping
   ];
 
   devPkgs = with pkgs; [
+    xst
     nodejs
     gnumake
     coreutils
     binutils-unwrapped
+  ];
+
+  shellPkgs = with pkgs; [
+    zsh
+    bat
+    exa
+    fasd
+    fd
+    fzf
+    tldr
+    nix-zsh-completions
   ];
 
   # TODO add Insomnia Core 2020
@@ -41,7 +49,7 @@ in {
   imports = [
     ./chromium.nix
     ./git.nix
-    #./zsh.nix
+    ./zsh.nix
     ./neovim
     ./tmux.nix
   ];
@@ -69,9 +77,6 @@ in {
         theme  = "Dracula";
       };
     };
-    broot = {
-      enable = true;
-      enableZshIntegration = true;
-    };
+    
   };
 }

@@ -5,7 +5,7 @@ augroup common
   autocmd!
   autocmd BufEnter * call EmptyBuffer()
   autocmd BufWinEnter * call s:OnBufEnter()
-  autocmd ColorScheme * call s:Highlight()
+  " autocmd ColorScheme * call s:Highlight()
   autocmd FileType * call s:OnFileType(expand('<amatch>'))
   if exists('##DirChanged')
     autocmd DirChanged,VimEnter * let &titlestring = pathshorten(substitute(getcwd(), $HOME, '~', ''))
@@ -60,25 +60,25 @@ augroup Persistence
   autocmd BufWinEnter * if expand("%") != "" | silent! loadview | endif
 augroup end
 
-function! s:Highlight() abort
-  if !has('gui_running') | hi Normal ctermbg=NONE guibg=NONE | endif
-  hi link CocCursorRange         Search
-  hi CocErrorSign                guifg=#fe8019 guibg=#3c3836 
-  hi link CocWarningSign         GruvboxYellowSign
-  hi link CocInfoSign            GruvboxBlueSign
-  hi link CocHintSign            GruvboxBlueSign
-  hi link CocErrorVirtualText    GruvboxBg2
-  hi link CocWarningVirtualText  GruvboxBg2
-  hi link CocInfoVirtualText     GruvboxBg2
-  hi link CocHintVirtualText     GruvboxBg2
-  hi link MsgSeparator           MoreMsg
-  hi VertSplit                   guifg=#3c3836
-  hi ColorColumn                 guibg=#3c3836
-  hi HighlightedyankRegion       guifg=#282828 guibg=#d65d0e
-  hi CursorLineNr                guifg=#7c6f64
-  hi LineNr                      guifg=#504945
-  hi CocFloating                 guifg=#928374 guibg=#504945
-endfunction
+" function! s:Highlight() abort
+"   if !has('gui_running') | hi Normal ctermbg=NONE guibg=NONE | endif
+"   hi link CocCursorRange         Search
+"   hi CocErrorSign                guifg=#fe8019 guibg=#3c3836 
+"   hi link CocWarningSign         GruvboxYellowSign
+"   hi link CocInfoSign            GruvboxBlueSign
+"   hi link CocHintSign            GruvboxBlueSign
+"   hi link CocErrorVirtualText    GruvboxBg2
+"   hi link CocWarningVirtualText  GruvboxBg2
+"   hi link CocInfoVirtualText     GruvboxBg2
+"   hi link CocHintVirtualText     GruvboxBg2
+"   hi link MsgSeparator           MoreMsg
+"   hi VertSplit                   guifg=#282a36
+"   hi ColorColumn                 guibg=#282a36
+"   hi HighlightedyankRegion       guifg=#282828 guibg=#d65d0e
+"   hi CursorLineNr                guifg=#7c6f64
+"   hi LineNr                      guifg=#504945
+"   hi CocFloating                 guifg=#928374 guibg=#504945
+" endfunction
 
 function! s:OnFileType(filetype)
   if index(['xml', 'html', 'css', 'scss', 'less'], a:filetype) >=0
@@ -97,4 +97,3 @@ function! s:OnBufEnter()
   endif
   unlet name
 endfunction
-

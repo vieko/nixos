@@ -49,6 +49,7 @@ let
     dracula-vim
   ] ++ cocPlugins;
 
+  # TODO fix cursor disappears when entering insert mode
   base      = builtins.readFile ./config.vim;
   status    = builtins.readFile ./statusline.vim;
   explorer  = builtins.readFile ./explorer.vim;
@@ -58,7 +59,6 @@ let
   abbrs     = builtins.readFile ./abbrs.vim;
   commands  = builtins.readFile ./commands.vim;
   auto      = builtins.readFile ./autocmd.vim;
-  
   vimConfig = base + status + explorer + leader + plugs + remap + abbrs +
   commands + auto;
 in {
