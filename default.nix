@@ -34,7 +34,6 @@
   environment.systemPackages = with pkgs; [
     wget
     unzip
-    nix-doc
   ];
 
   # +> HOME MANAGER

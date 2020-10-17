@@ -1,7 +1,6 @@
 ## TODO
 
 - FIX disappearing cursor issue on Gnome Terminal
-- office
 - razer
 - add profile photo
 - add wallpaper
