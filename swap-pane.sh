@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /usr/bin/env fish
 
 CONF="$TMUX_PLUGINS_PATH/lastpane"
 swap() { tmux swap-pane -s"$1" -t"$2"; }

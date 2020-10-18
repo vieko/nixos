@@ -100,7 +100,7 @@ let mapleader=" "
                  nnoremap <leader>pd :cd %:p:h<CR>:pwd<CR>
 "        HELP    h
 "                r      → reload vim
-                 nnoremap <leader>hr :source ~/.config/nvim/.vimrc<CR>
+                 nnoremap <leader>hr :source /etc/dotfiles/neovim/config.vim<CR>
 "                k      → look up in the docset
                  nnoremap <silent><leader>hh :silent! :Lookup<CR>
 "                i      → highlight group under cursor

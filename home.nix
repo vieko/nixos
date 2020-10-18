@@ -15,6 +15,9 @@ let
   ];
 
   devPkgs = with pkgs; [
+    alacritty
+    # now-cli
+    yarn
     xst
     nodejs
     gnumake
@@ -23,14 +26,13 @@ let
   ];
 
   shellPkgs = with pkgs; [
-    zsh
     bat
     exa
     fasd
     fd
     fzf
     tldr
-    nix-zsh-completions
+    any-nix-shell
   ];
 
   # TODO add Insomnia Core 2020
@@ -38,6 +40,7 @@ let
     slack
     discord
     spotify
+    razergenie
     libreoffice-fresh
     _1password-gui
   ];
@@ -54,13 +57,10 @@ in {
   imports = [
     ./chromium.nix
     ./git.nix
-    ./zsh.nix
     ./fish.nix
     ./neovim
     ./tmux.nix
   ];
-
-  #xdg.enable = true;
 
   home = {
     username = "vieko";
@@ -70,21 +70,7 @@ in {
     packages = defaultPkgs ++ devPkgs ++ shellPkgs ++ appPkgs ++ gitPkgs;
 
     sessionVariables = {
-      # == defaults
       EDITOR = "nvim";
-      # XDG_CACHE_HOME  = "$HOME/.cache";
-      # XDG_CONFIG_HOME = "$HOME/.config";
-      # XDG_DATA_HOME   = "$HOME/.local/share";
-      # XDG_BIN_HOME    = "$HOME/.local/bin";
-      # == zsh
-      # ZDOTDIR     = "$XDG_CONFIG_HOME/zsh";
-      # ZSH_CACHE   = "$XDG_CACHE_HOME/zsh";
-      # ZGEN_DIR    = "$XDG_DATA_HOME/zsh";
-      # ZGEN_SOURCE = "$ZGEN_DIR/zgen.zsh";
-      # == tmux
-      # TMUX_HOME = "$XDG_CONFIG_HOME/tmux";
-      # TMUXIFIER = "$XDG_DATA_HOME/tmuxifier";
-      # TMUXIFIER_LAYOUT_PATH = "$XDG_DATA_HOME/tmuxifier";
     };
   };
 
@@ -95,6 +81,34 @@ in {
       config = {
         theme  = "Dracula";
       };
+    };
+    # direnv = {
+    #   enable = true;
+    #   enableFishIntegration = true;
+    #   enableNixDirenvIntegration = true;
+    # };
+    fzf = {
+      enable = true;
+      enableFishIntegration = true;
+      defaultOptions = [
+        "--color=dark"
+        "--color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f"
+        "--color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7"
+      ];
+    };
+    gpg = {
+      enable = true;
+    };
+    ssh = {
+      enable = true;
+    };
+  };
+
+  services = {
+    gpg-agent = {
+      enable = true;
+      defaultCacheTtl = 1800;
+      enableSshSupport = true;
     };
   };
 }

@@ -11,15 +11,15 @@
           wayland = false; 
           autoSuspend = false;
         };
-	sessionCommands = ''
-	  # fixes issue with Looking Glass
-	  export SDL_VIDEO_X11_VISUALID=
-	'';
+        sessionCommands = ''
+          # fixes issue with Looking Glass
+          export SDL_VIDEO_X11_VISUALID=
+        '';
       };
       desktopManager.gnome3.enable = true;
     };
-    dbus.packages = [ pkgs.gnome3.dconf ];
-    udev.packages = [ pkgs.gnome3.gnome-settings-daemon ];
+    # dbus.packages = [ pkgs.gnome3.dconf ];
+    # udev.packages = [ pkgs.gnome3.gnome-settings-daemon ];
   };
   environment.systemPackages = with pkgs; [
     gnome3.gnome-shell-extensions

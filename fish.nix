@@ -14,6 +14,10 @@ in {
   programs.fish = {
     enable = true;
     plugins = [ dracula ];
+    # promptInit = ''
+    #   eval (direnv hook fish)
+    #   any-nix-shell fish --info-right | source
+    # '';
     shellAliases = {
       # +> GENERAL
       y    = "xclip -selection clipboard -in";
@@ -51,6 +55,9 @@ in {
       gst  = "git stash";
       gr   = "git reset HEAD";
       grv  = "git rev-parse";
+      # +> NOW
+      now     = "~/.yarn/bin/vercel";
+      vercel  = "~/.yarn/bin/vercel";
     };
     shellInit = '' set fish_greeting '';
   };

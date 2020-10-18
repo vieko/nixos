@@ -1,13 +1,16 @@
 ## TODO
 
-- FIX disappearing cursor issue on Gnome Terminal
-- razer
+- add tableplus
+- add insomnia
+- add gitkraken
+
 - add profile photo
 - add wallpaper
+
 - gpg key
 - bring back pem keys
-- dconfs
-- git on neovim
 - add secrets, passwords, etc
+
+- dconfs
+
 - add looking glass to path (checkout R2?)
-- migrate to flakes

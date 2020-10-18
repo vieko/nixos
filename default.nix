@@ -8,6 +8,12 @@
     ./gnome.nix
   ];
 
+  # +> SUID WRAPPERS
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+    pinentryFlavor = "gnome3";
+  };
 
   # +> NETWORKING
   networking = {
@@ -47,9 +53,9 @@
   # +> USERS
   users.users.vieko = {
     isNormalUser = true;
-    uid = 1000;
     extraGroups = [ "wheel" "networkmanager" "kvm" "libvirt" "plugdev" ];
     shell = pkgs.fish;
+    uid = 1000;
     #openssh.authorizationKeys.keys = [
     #  (builtins.readFile ../private-config/ssh/id_rsa.pub)
     #];
@@ -64,8 +70,10 @@
       options   = "--delete-older-than 7d";
     };
     trustedUsers = [ "root" "vieko" ];
-    #package = pkgs.nixFlakes;
-    #extraOptions = "experimental-features = nix-command flakes";
+    # extraOptions = ''
+    #   keep-outputs = true
+    #   keep-derivations = true
+    # '';
   };
   nixpkgs.config.allowUnfree = true;
 

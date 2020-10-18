@@ -19,7 +19,7 @@
     extraModprobeConfig = ''options kvm ignore_msrs=1'';
     blacklistedKernelModules = [ "nvidia" "nouveau" ];
     cleanTmpDir = true;
-    plymouth.enable = false;
+    plymouth.enable = true;
   };
 
   # +> CPU

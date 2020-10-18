@@ -21,7 +21,7 @@
   "yank.highlight.duration": 100,
   "yank.highlight.enable": true,
 
-  "list.indicator": "⚡",
+  "list.indicator": "ϟ",
   "list.previewSplitRight": true,
 
   "list.source.grep.command": "rg",
