@@ -9,6 +9,8 @@ let
 
   cocPlugins = with pkgs.vimPlugins; [
     coc-json
+    coc-yank
+    coc-git
     coc-css
     coc-lists
     coc-eslint

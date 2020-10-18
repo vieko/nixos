@@ -49,7 +49,7 @@
     isNormalUser = true;
     uid = 1000;
     extraGroups = [ "wheel" "networkmanager" "kvm" "libvirt" "plugdev" ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     #openssh.authorizationKeys.keys = [
     #  (builtins.readFile ../private-config/ssh/id_rsa.pub)
     #];

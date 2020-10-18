@@ -85,15 +85,20 @@
   "suggest.echodocSupport": false,
   "suggest.completionItemKindLabels": {},
 
-  "tabnine.priority": 100,
-
   "prettier.statusItemText": "Prettier",
   "prettier.disableSuccessMessage": true,
 
   "eslint.enable": true,
   "eslint.autoFix": false,
   "eslint.autoFixOnSave": true,
-  "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact", "typescript", "typescriptreact", "typescript.tsx"],
+  "eslint.filetypes": [
+    "javascript",
+    "javascript.jsx",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx"
+  ],
 
   "tsserver.trace.server": "messages",
   "tsserver.formatOnType": true,

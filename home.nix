@@ -2,6 +2,9 @@
 
 let
   defaultPkgs = with pkgs; [
+    iftop
+    iotop
+    mtr
     htop
     ytop
     tree
@@ -52,6 +55,7 @@ in {
     ./chromium.nix
     ./git.nix
     ./zsh.nix
+    ./fish.nix
     ./neovim
     ./tmux.nix
   ];

@@ -36,12 +36,12 @@ inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " gruvbox overrides for tpope/unimpaired
-nnoremap <silent> [oh :call gruvbox#hls_show()<CR>
-nnoremap <silent> ]oh :call gruvbox#hls_hide()<CR>
-nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
-nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
-nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
-nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
+"nnoremap <silent> [oh :call gruvbox#hls_show()<CR>
+"nnoremap <silent> ]oh :call gruvbox#hls_hide()<CR>
+"nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
+"nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+"nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+"nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
 " use `[c` and `]c` to navigate husks
 nnoremap <buffer><silent> [c <Plug>(defx-git-prev)
