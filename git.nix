@@ -39,7 +39,5 @@ in {
       ".env.production.local"
       ".vercel"
     ];
-    userEmail = "vieko.franetovic@gmail.com";
-    userName = "Vieko Franetovic";
   };
 }
