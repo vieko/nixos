@@ -6,7 +6,7 @@ USER=vieko
 HOST=pandemonium
 HOME=/home/$USER
 NIXOS_VERSION=20.09
-DOTFILES=$HOME/dotfiles
+DOTFILES=$HOME/$USER
 
 # +> SET TARGET AND PERMISSIONS 
 sudo ln -sfn $DOTFILES /etc/dotfiles
