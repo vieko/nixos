@@ -1,1 +1,1 @@
-[![KRUNCH](https://github.com/vieko/vieko/raw/main/images/krunch.png)](https://twitter.com/vieko)
+[![KRUNCH](https://github.com/vieko/vieko/raw/main/images/krunch.png)]
