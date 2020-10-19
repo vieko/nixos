@@ -12,6 +12,7 @@ let
     killall
     ripgrep
     neofetch
+    appimage-run
   ];
 
   devPkgs = with pkgs; [
@@ -41,6 +42,7 @@ let
     slack
     discord
     spotify
+    jetbrains.datagrip
     razergenie
     keybase-gui
     _1password-gui
