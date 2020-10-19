@@ -40,6 +40,7 @@
   environment.systemPackages = with pkgs; [
     wget
     unzip
+    (import ./custom/studio3t.nix)
   ];
 
   # +> HOME MANAGER
