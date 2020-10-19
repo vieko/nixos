@@ -56,9 +56,9 @@
     extraGroups = [ "wheel" "networkmanager" "kvm" "libvirt" "plugdev" ];
     shell = pkgs.fish;
     uid = 1000;
-    #openssh.authorizationKeys.keys = [
-    #  (builtins.readFile ../private-config/ssh/id_rsa.pub)
-    #];
+    openssh.authorizedKeys.keys = [
+      (builtins.readFile ~/.ssh/id_rsa.pub)
+    ];
   };
 
   # +> CONFIG

@@ -16,13 +16,14 @@ let
 
   devPkgs = with pkgs; [
     alacritty
-    # now-cli
-    yarn
     xst
+    yarn
     nodejs
     gnumake
     coreutils
     binutils-unwrapped
+    # TODO: figure how to add latest vercel via nix
+    # now-cli
   ];
 
   shellPkgs = with pkgs; [
@@ -41,8 +42,9 @@ let
     discord
     spotify
     razergenie
-    libreoffice-fresh
+    keybase-gui
     _1password-gui
+    libreoffice-fresh
   ];
 
   gitPkgs = with pkgs.gitAndTools; [
@@ -109,6 +111,12 @@ in {
       enable = true;
       defaultCacheTtl = 1800;
       enableSshSupport = true;
+    };
+    kbfs = {
+      enable = true;
+    };
+    keybase = {
+      enable = true;
     };
   };
 }

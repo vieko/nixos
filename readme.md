@@ -2,12 +2,10 @@
 
 - add tableplus
 - add insomnia
-- add gitkraken
 
 - add profile photo
 - add wallpaper
 
-- gpg key
 - bring back pem keys
 - add secrets, passwords, etc
 
