@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 let
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+
+  unstablePkgs = with unstable; [
+    mongodb-compass
+  ];
+
   defaultPkgs = with pkgs; [
     iftop
     iotop
@@ -71,7 +77,7 @@ in {
     homeDirectory = "/home/vieko";
     stateVersion = "20.09";
 
-    packages = defaultPkgs ++ devPkgs ++ shellPkgs ++ appPkgs ++ gitPkgs;
+    packages = unstablePkgs ++ defaultPkgs ++ devPkgs ++ shellPkgs ++ appPkgs ++ gitPkgs;
 
     sessionVariables = {
       EDITOR = "nvim";
