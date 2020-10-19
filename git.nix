@@ -18,11 +18,10 @@ in {
   programs.git = {
     enable  = true;
     extraConfig = gitConfig;
-    # TODO add gpg signing keys
-    #signing = {
-    #  key = "";
-    #  signByDefault = true;
-    #};
+    signing = {
+      key = "E4483C99CE4A9C21";
+      signByDefault = true;
+    };
     ignores = [
       "/node_modules"
       "/.next/"
@@ -40,7 +39,7 @@ in {
       ".env.production.local"
       ".vercel"
     ];
-    userEmail = "vieko.franetovic@gmail.com";
+    userEmail = "48670+vieko@users.noreply.github.com";
     userName = "Vieko Franetovic";
   };
 }
