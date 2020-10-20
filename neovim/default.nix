@@ -38,6 +38,7 @@ let
     vim-tmux-navigator
     vim-matchup
     vim-sneak
+    limelight-vim
     # == editor
     vim-repeat
     vim-surround

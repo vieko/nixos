@@ -68,7 +68,7 @@ let g:matchup_matchparen_offscreen={}
 let g:defx_icons_enable_syntax_highlight = 0
 
 " limelight
-let g:limelight_conceal_guifg = '#3c3836'
+let g:limelight_conceal_guifg = '#6272A4'
 let g:limelight_paragraph_span = 0
 
 " autopairs
