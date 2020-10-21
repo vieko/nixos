@@ -40,8 +40,14 @@
   environment.systemPackages = with pkgs; [
     wget
     unzip
-    (import ./custom/studio3t.nix)
+    insomnia
+    # tableplus
   ];
+
+  nixpkgs.config.packageOverrides = pkgs: rec {
+    insomnia = pkgs.callPackage ./custom/insomnia.nix {};
+    # tableplus = pkgs.callPackage ./custom/tableplus.nix {};
+  };
 
   # +> HOME MANAGER
   home-manager.users.vieko = (import ./home.nix {
