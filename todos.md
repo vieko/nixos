@@ -5,3 +5,4 @@
 - FIX missing user issue
 - ADD wallpaper + avatar
 - Configure Mouse Buttons
+- update tmux right sidebar
