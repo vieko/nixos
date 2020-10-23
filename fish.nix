@@ -15,8 +15,7 @@ in {
     enable = true;
     plugins = [ dracula ];
     # promptInit = ''
-    #   eval (direnv hook fish)
-    #   any-nix-shell fish --info-right | source
+    #   eval (dircolors ~/.dir_colors/dircolors | head -n 1 | sed 's/^LS_COLORS=/set -x LS_COLORS /;s/;$//')
     # '';
     shellAliases = {
       # +> GENERAL

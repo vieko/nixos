@@ -4,3 +4,9 @@
 [submodule "dracula/zsh"]
 	path = dracula/zsh
 	url = https://github.com/dracula/zsh.git
+[submodule "dracula/insomnia"]
+	path = dracula/insomnia
+	url = https://github.com/dracula/insomnia.git
+[submodule "dracula/gnome-terminal"]
+	path = dracula/gnome-terminal
+	url = https://github.com/dracula/gnome-terminal

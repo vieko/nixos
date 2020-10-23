@@ -26,6 +26,7 @@
     gnome3.networkmanagerapplet
     gnome3.gnome-tweaks
     ant-dracula-theme
+    gnomeExtensions.sound-output-device-chooser
   ];
 
   systemd.targets.sleep.enable = false;

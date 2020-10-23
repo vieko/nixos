@@ -41,12 +41,14 @@
     wget
     unzip
     insomnia
-    # tableplus
+    popshell
+    # popshell-shortcuts
   ];
 
   nixpkgs.config.packageOverrides = pkgs: rec {
     insomnia = pkgs.callPackage ./custom/insomnia.nix {};
-    # tableplus = pkgs.callPackage ./custom/tableplus.nix {};
+    popshell = pkgs.callPackage ./custom/popshell.nix {};
+    # popshell-shortcuts = pkgs.callPackage ./custom/popshell-shortcuts.nix {};
   };
 
   # +> HOME MANAGER

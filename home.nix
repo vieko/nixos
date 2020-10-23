@@ -18,12 +18,10 @@ let
     killall
     ripgrep
     neofetch
-    appimage-run
   ];
 
   devPkgs = with pkgs; [
     alacritty
-    xst
     yarn
     nodejs
     gnumake
@@ -50,13 +48,16 @@ let
     spotify
     jetbrains.datagrip
     razergenie
+    torrential
     keybase-gui
     _1password-gui
     libreoffice-fresh
+    gimp
   ];
 
   gitPkgs = with pkgs.gitAndTools; [
     diff-so-fancy
+    gh
     hub
     tig
   ];
