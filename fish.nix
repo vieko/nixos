@@ -57,6 +57,11 @@ in {
       # +> NOW
       now     = "~/.yarn/bin/vercel";
       vercel  = "~/.yarn/bin/vercel";
+      # +> NEOVIM
+      vi   = "nvim";
+      vim  = "nvim";
+      code = "nvim";
+      edit = "nvim";
     };
     shellInit = '' set fish_greeting '';
   };
