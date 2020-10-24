@@ -22,7 +22,6 @@ let
   ];
 
   devPkgs = with pkgs; [
-    alacritty
     yarn
     nodejs
     gnumake
@@ -45,8 +44,10 @@ let
   # TODO add Insomnia Core 2020
   appPkgs = with pkgs; [
     slack
+    steam
     discord
     spotify
+    alacritty
     jetbrains.datagrip
     razergenie
     torrential
@@ -115,7 +116,6 @@ in {
       enable = true;
     };
     alacritty ={
-
       enable = true;
       settings = {
         env = {

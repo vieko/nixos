@@ -6,3 +6,5 @@
 - ADD wallpaper + avatar
 - Configure Mouse Buttons
 - update tmux right sidebar
+- rethink tiling shortcuts
+- tweak Input (size and line-height)
