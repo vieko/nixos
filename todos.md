@@ -6,5 +6,6 @@
 - ADD wallpaper + avatar
 - Configure Mouse Buttons
 - update tmux right sidebar
-- rethink tiling shortcuts
+- consider pink instead of purple for tiling highlight
 - tweak Input (size and line-height)
+- [rethink tiling shortcuts](https://github.com/pop-os/shell/blob/master_focal/scripts/configure.sh) 
