@@ -4,8 +4,10 @@
 - ADD dconfs
 - FIX missing user issue
 - ADD wallpaper + avatar
-- Configure Mouse Buttons
-- update tmux right sidebar
-- consider pink instead of purple for tiling highlight
-- tweak Input (size and line-height)
+- CONFIGURE Mouse Buttons
+- UPDATE tmux right sidebar
+- CHANGE pink instead of purple for tiling highlight (matches gnome theme better)?
+- TWEAK Input Font (size and line-height)
+- FIX Spotify
+- SETUP sound in Windows 10 VM
 - [rethink tiling shortcuts](https://github.com/pop-os/shell/blob/master_focal/scripts/configure.sh) 
