@@ -27,6 +27,7 @@
     gnome3.gnome-tweaks
     ant-dracula-theme
     gnomeExtensions.sound-output-device-chooser
+    # gnomeExtensions.dash-to-panel # breaks things
   ];
 
   systemd.targets.sleep.enable = false;

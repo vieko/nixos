@@ -42,12 +42,14 @@
     unzip
     insomnia
     popshell
+    # unite-shell
     # popshell-shortcuts
   ];
 
   nixpkgs.config.packageOverrides = pkgs: rec {
     insomnia = pkgs.callPackage ./custom/insomnia.nix {};
     popshell = pkgs.callPackage ./custom/popshell.nix {};
+    # unite-shell = pkgs.callPackage ./custom/uniteshell.nix {};
     # popshell-shortcuts = pkgs.callPackage ./custom/popshell-shortcuts.nix {};
   };
 

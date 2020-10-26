@@ -1,4 +1,5 @@
 ## TODOS
+- TRY again with TablePlus
 - ADD Wireguard
 - ADD Prisma Binaries
 - ADD dconfs
