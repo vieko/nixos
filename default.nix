@@ -42,6 +42,7 @@
     unzip
     insomnia
     popshell
+    looking-glass-client
     # unite-shell
     # popshell-shortcuts
   ];
@@ -49,6 +50,8 @@
   nixpkgs.config.packageOverrides = pkgs: rec {
     insomnia = pkgs.callPackage ./custom/insomnia.nix {};
     popshell = pkgs.callPackage ./custom/popshell.nix {};
+    looking-glass-client = pkgs.callPackage ./custom/looking-glass-client.nix
+    {};
     # unite-shell = pkgs.callPackage ./custom/uniteshell.nix {};
     # popshell-shortcuts = pkgs.callPackage ./custom/popshell-shortcuts.nix {};
   };

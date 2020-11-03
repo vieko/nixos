@@ -26,7 +26,6 @@ let
     nodejs
     gnumake
     coreutils
-    binutils-unwrapped
     # TODO: figure how to add latest vercel via nix
     # now-cli
   ];
