@@ -1,7 +1,6 @@
 ## TODOS
-- TRY again with TablePlus
+- TRY again with TablePlus?
 - ADD Wireguard
-- ADD Prisma Binaries
 - ADD dconfs
 - FIX missing user issue
 - ADD wallpaper + avatar
@@ -10,5 +9,6 @@
 - CHANGE pink instead of purple for tiling highlight (matches gnome theme better)?
 - TWEAK Input Font (size and line-height)
 - FIX Spotify
+- ADD chrome plugins
 - SETUP sound in Windows 10 VM
 - [rethink tiling shortcuts](https://github.com/pop-os/shell/blob/master_focal/scripts/configure.sh) 

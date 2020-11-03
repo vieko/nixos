@@ -16,6 +16,8 @@ let
     coc-eslint
     coc-prettier
     coc-tsserver
+    coc-emmet
+    # coc-tailwindcss
   ];
 
   myVimPlugins = with plugins; [
@@ -39,6 +41,7 @@ let
     vim-matchup
     vim-sneak
     limelight-vim
+    emmet-vim
     # == editor
     vim-repeat
     vim-surround

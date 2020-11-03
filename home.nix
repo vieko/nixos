@@ -45,6 +45,8 @@ let
   appPkgs = with pkgs; [
     slack
     steam
+    # wine
+    # winetricks
     discord
     spotify
     alacritty
@@ -53,7 +55,7 @@ let
     torrential
     keybase-gui
     _1password-gui
-    libreoffice-fresh
+    # libreoffice-fresh
     gimp
   ];
 
