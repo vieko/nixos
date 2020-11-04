@@ -67,7 +67,7 @@
   # +> USERS
   users.users.vieko = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "kvm" "libvirt" "plugdev" ];
+    extraGroups = [ "wheel" "networkmanager" "kvm" "libvirt" "plugdev" "audio" ];
     shell = pkgs.fish;
     uid = 1000;
     openssh.authorizedKeys.keys = [

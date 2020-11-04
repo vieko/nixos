@@ -62,6 +62,9 @@ in {
       vim  = "nvim";
       code = "nvim";
       edit = "nvim";
+      # +> VIRTUALIZATION
+      glass = "looking-glass-client -f /dev/shm/looking-glass";
+      scream = "scream-alsa -i virbr0";
     };
     shellInit = '' set fish_greeting '';
   };
