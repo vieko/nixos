@@ -1,5 +1,6 @@
 ## TODOS
 - TRY again with TablePlus?
+- LEARN to add desktop items
 - ADD Wireguard
 - ADD dconfs
 - FIX missing user issue
