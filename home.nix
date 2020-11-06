@@ -54,7 +54,7 @@ let
     torrential
     keybase-gui
     _1password-gui
-    # libreoffice-fresh
+    libreoffice-fresh
     gimp
     appimage-run
   ];
