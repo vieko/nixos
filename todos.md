@@ -10,5 +10,4 @@
 - TWEAK Input Font (size and line-height)
 - FIX Spotify
 - ADD chrome plugins
-- SETUP sound in Windows 10 VM
 - [rethink tiling shortcuts](https://github.com/pop-os/shell/blob/master_focal/scripts/configure.sh) 

@@ -56,6 +56,7 @@ let
     _1password-gui
     # libreoffice-fresh
     gimp
+    appimage-run
   ];
 
   gitPkgs = with pkgs.gitAndTools; [
