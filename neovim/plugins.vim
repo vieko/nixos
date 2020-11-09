@@ -59,6 +59,10 @@ xmap T <Plug>Sneak_T
 omap t <Plug>Sneak_t
 omap T <Plug>Sneak_T
 
+" vim-emmet
+let g:user_emmet_mode='i'
+imap <C-l> <C-y>,
+
 " vim-matchup
 let g:matchup_matchparen_deferred=1
 let g:matchup_matchparen_enabled=0
