@@ -108,5 +108,7 @@
 
   "javascript.suggest.enabled": false,
   "javascript.suggest.autoImports": true,
-  "javascript.suggestionActions.enabled": false
+  "javascript.suggestionActions.enabled": false,
+
+  "tailwindCSS.emmetCompletions": true
 }
