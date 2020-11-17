@@ -5,6 +5,7 @@
     <home-manager/nixos>
     ./hardware.nix
     ./windows.nix
+    ./docker.nix
     ./gnome.nix
   ];
 

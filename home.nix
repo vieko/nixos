@@ -57,6 +57,7 @@ let
     libreoffice-fresh
     gimp
     appimage-run
+    firefox-devedition-bin
   ];
 
   gitPkgs = with pkgs.gitAndTools; [
