@@ -66,7 +66,7 @@ in {
       glass = "looking-glass-client -f /dev/shm/looking-glass";
       scream = "scream-alsa -i virbr0";
       # +> APP IMAGES
-      sizzy = "nohup appimage-run ~/AppImages/Sizzy-0.42.0.AppImage & disown";
+      sizzy = "nohup appimage-run ~/AppImages/Sizzy-0.43.0.AppImage & disown";
     };
     shellInit = '' set fish_greeting '';
   };
