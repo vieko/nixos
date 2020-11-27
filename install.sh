@@ -3,14 +3,21 @@
 set +x
 
 USER=vieko
-HOST=pandemonium
+HOST=chaos
 HOME=/home/$USER
 NIXOS_VERSION=20.09
-DOTFILES=$HOME/$USER
+DOTFILES=$HOME/Dotfiles
 
 # +> SET TARGET AND PERMISSIONS 
 sudo ln -sfn $DOTFILES /etc/dotfiles
 chown -R $USER:users $HOME $DOTFILES
+
+# +> SET USER PROFILE FOR GNOME
+sudo cp images/vieko-avatar-twitter.png /var/lib/AccountsService/icons/vieko
+
+# +> COPY WALLPAPERS TO PICTURES
+sudo cp images/black-purple.jpg $HOME/Pictures/
+sudo cp images/orange-purple.jpg $HOME/Pictures/
 
 # +> ADD SOURCES AND UPDATE
 sudo nix-channel --add "https://nixos.org/channels/nixos-${NIXOS_VERSION}" nixos

@@ -5,11 +5,13 @@ let
 
   unstablePkgs = with unstable; [
     mongodb-compass
+    obsidian
   ];
 
   defaultPkgs = with pkgs; [
     iftop
     iotop
+    nvtop
     mtr
     htop
     ytop
@@ -18,6 +20,10 @@ let
     killall
     ripgrep
     neofetch
+    lm_sensors
+    # rrdtool
+    psensor
+    # usbutils
     # input-fonts
   ];
 
@@ -69,6 +75,10 @@ let
 
 in {
   programs.home-manager.enable = true;
+
+  # nixpkgs.overlays = [
+  #   (import ./overlays/lm-sensors.nix)
+  # ];
 
   imports = [
     ./chromium.nix
@@ -130,6 +140,25 @@ in {
           padding = {
             x = 8;
             y = 8;
+          };
+        };
+        font = {
+          size = 11;
+          normal = {
+            family = "Input Mono Narrow";
+            style = "Regular";
+          };
+          bold = {
+            family = "Input Mono Narrow";
+            style = "Bold";
+          };
+          italic = {
+            family = "Input Mono Narrow";
+            style = "Italic";
+          };
+          bold_italic = {
+            family = "Input Mono Narrow";
+            style = "Bold Italic";
           };
         };
         colors = {

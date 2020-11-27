@@ -19,7 +19,7 @@ in {
     enable  = true;
     extraConfig = gitConfig;
     signing = {
-      key = "E4483C99CE4A9C21";
+      key = "91E1D4C6710795E6";
       signByDefault = true;
     };
     ignores = [

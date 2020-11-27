@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
-{
+let
+  unstable = import <nixos-unstable> {};
+in {
   services = {
     xserver =  {
       enable = true;
@@ -8,7 +10,7 @@
       displayManager = {
         gdm = {
           enable = true;
-          wayland = false; 
+          wayland = true; 
           autoSuspend = false;
         };
         sessionCommands = ''
@@ -17,6 +19,7 @@
         '';
       };
       desktopManager.gnome3.enable = true;
+      videoDrivers = [ "nvidia" ];
     };
     # dbus.packages = [ pkgs.gnome3.dconf ];
     # udev.packages = [ pkgs.gnome3.gnome-settings-daemon ];
@@ -25,7 +28,7 @@
     gnome3.gnome-shell-extensions
     gnome3.networkmanagerapplet
     gnome3.gnome-tweaks
-    ant-dracula-theme
+    unstable.dracula-theme
     gnomeExtensions.sound-output-device-chooser
     # gnomeExtensions.dash-to-panel # breaks things
   ];

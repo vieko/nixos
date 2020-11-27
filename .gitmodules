@@ -10,3 +10,6 @@
 [submodule "dracula/gnome-terminal"]
 	path = dracula/gnome-terminal
 	url = https://github.com/dracula/gnome-terminal
+[submodule "dracula/obsidian"]
+	path = dracula/obsidian
+	url = https://github.com/dracula/obsidian.git

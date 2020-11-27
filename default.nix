@@ -4,6 +4,7 @@
   imports = [ 
     <home-manager/nixos>
     ./hardware.nix
+    ./chaos.nix
     ./windows.nix
     ./docker.nix
     ./gnome.nix
@@ -18,19 +19,11 @@
 
   # +> NETWORKING
   networking = {
-    hostName = "pandemonium";
     networkmanager.enable = true;
-    #wireless.networks = ./private-config/wifi.nix;
     firewall.enable = false;
     useDHCP = false;
-    interfaces = {
-      br0.useDHCP = true;
-      eno2.useDHCP = true;
-      wlo1.useDHCP = true;
-    };
-    bridges.br0 = {
-      interfaces = [ "eno2" ];
-    };
+    nameservers = [ "8.8.8.8"  "8.8.4.4" ];
+    enableIPv6 = false;
   };
 
   # +> LOCALIZATION
@@ -44,6 +37,7 @@
     insomnia
     popshell
     looking-glass-client
+    # lm_sensors
     # unite-shell
     # popshell-shortcuts
   ];
@@ -51,8 +45,8 @@
   nixpkgs.config.packageOverrides = pkgs: rec {
     insomnia = pkgs.callPackage ./custom/insomnia.nix {};
     popshell = pkgs.callPackage ./custom/popshell.nix {};
-    looking-glass-client = pkgs.callPackage ./custom/looking-glass-client.nix
-    {};
+    looking-glass-client = pkgs.callPackage ./custom/looking-glass-client.nix {};
+    # lm_sensors = pkgs.callPackage ./custom/lm-sensors.nix {};
     # unite-shell = pkgs.callPackage ./custom/uniteshell.nix {};
     # popshell-shortcuts = pkgs.callPackage ./custom/popshell-shortcuts.nix {};
   };
@@ -70,9 +64,8 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "kvm" "libvirt" "plugdev" "audio" ];
     shell = pkgs.fish;
-    uid = 1000;
     openssh.authorizedKeys.keys = [
-      (builtins.readFile ~/.ssh/id_rsa.pub)
+      (builtins.readFile /home/vieko/.ssh/id_rsa.pub)
     ];
   };
 

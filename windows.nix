@@ -26,9 +26,12 @@
   # };
 
   environment.systemPackages = with pkgs; [
+    xdotool
+    usbutils
     pciutils
-    virt-manager
     hwloc
+    virt-manager
+    libhugetlbfs
     scream-receivers
   ];
 }
