@@ -84,6 +84,12 @@ in {
   # +> HUGEPAGES
   environment.etc.fstab.text = "hugetlbfs /dev/hugepages hugetlbfs mode=1770,gid=302 0 0";
 
+  # +> PRINTING
+  # services.printing ={
+  #   enable = true;
+  #   drivers = [ pkgs.brlaser pkgs.hll2390dw-cups ];
+  # };
+
   # +> NETWORKING
   networking = {
     hostName = "chaos";
