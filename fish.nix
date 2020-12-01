@@ -67,6 +67,7 @@ in {
       # +> VIRTUALIZATION
       glass = "looking-glass-client win:size=1920x1080";
       scream = "scream-alsa -i virbr0";
+      ragnarok = "~/Dotfiles/utils/start-glass-scream.sh";
       # +> APP IMAGES
       sizzy = "nohup appimage-run ~/AppImages/Sizzy-0.43.0.AppImage & disown";
     };

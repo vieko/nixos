@@ -3,7 +3,7 @@
 - LEARN to add desktop items
 - ADD Wireguard
 - ADD dconfs
-- FIX missing user issue
+- FIX missing user issue (gnome)
 - CONFIGURE Mouse Buttons
 - UPDATE tmux right sidebar
 - ADD chrome plugins
