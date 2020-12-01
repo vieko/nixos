@@ -6,6 +6,7 @@ let
   unstablePkgs = with unstable; [
     mongodb-compass
     obsidian
+    _1password-gui
   ];
 
   defaultPkgs = with pkgs; [
@@ -59,7 +60,6 @@ let
     razergenie
     torrential
     keybase-gui
-    _1password-gui
     libreoffice-fresh
     gimp
     appimage-run

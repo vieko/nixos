@@ -58,6 +58,10 @@
 
   # +> SERVICES
   services.openssh.enable = true;
+  services.printing ={
+    enable = true;
+    drivers = [ pkgs.hplip ];
+  };
 
   # +> USERS
   users.users.vieko = {
