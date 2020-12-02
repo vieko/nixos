@@ -6,7 +6,7 @@
 
 stdenv.mkDerivation rec {
   pname = "looking-glass-client";
-  version = "B2";
+  version = "76710ef20120432a4a9aab1949fde71c0de93781";
   gcc = clang;
   binutils = binutils-unwrapped;
   NIX_CFLAGS_COMPILE = "-msse4.1";
