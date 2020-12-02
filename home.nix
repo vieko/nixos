@@ -47,7 +47,6 @@ let
     any-nix-shell
   ];
 
-  # TODO add Insomnia Core 2020
   appPkgs = with pkgs; [
     slack
     steam

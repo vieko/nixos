@@ -13,3 +13,6 @@
 [submodule "dracula/obsidian"]
 	path = dracula/obsidian
 	url = https://github.com/dracula/obsidian.git
+[submodule "dracula/firefox"]
+	path = dracula/firefox
+	url = https://github.com/dracula/firefox.git
