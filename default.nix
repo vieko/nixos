@@ -17,6 +17,9 @@
     pinentryFlavor = "gnome3";
   };
 
+  # +> STEAM
+  programs.steam.enable = true;
+
   # +> NETWORKING
   networking = {
     networkmanager.enable = true;

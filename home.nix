@@ -6,7 +6,7 @@ let
   unstablePkgs = with unstable; [
     mongodb-compass
     obsidian
-    _1password-gui
+    # _1password-gui
   ];
 
   defaultPkgs = with pkgs; [
@@ -49,7 +49,7 @@ let
 
   appPkgs = with pkgs; [
     slack
-    steam
+    # steam
     # wine
     # winetricks
     discord

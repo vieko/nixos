@@ -43,8 +43,12 @@
   # +> SOUND
   sound.enable = true;
   hardware.pulseaudio.enable = true;
-  hardware.pulseaudio.support32Bit = true;
+  # hardware.pulseaudio.support32Bit = true;
 
   # +>OPENGL
-  hardware.opengl.driSupport32Bit = true;
+  hardware.opengl = {
+  #   enable = true;
+  #   driSupport32Bit = true;
+    extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
+  };
 }
