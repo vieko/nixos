@@ -65,12 +65,12 @@ in {
       # +> SENSORS
       howhot = "watch -n 2 sensors -c /etc/sensors.d/gigabyte-x570.conf";
       # +> VIRTUALIZATION
-      glass = "looking-glass-client win:size=1920x1080";
-      scream = "scream-alsa -i virbr0";
+      glass    = "looking-glass-client win:size=1920x1080";
+      scream   = "scream-alsa -i virbr0";
       ragnarok = "~/Dotfiles/utils/start-glass-scream.sh";
       # +> APP IMAGES
-      sizzy = "nohup appimage-run ~/AppImages/Sizzy-0.43.0.AppImage & disown";
+      sizzy    = "nohup appimage-run ~/AppImages/Sizzy-0.43.0.AppImage & disown";
     };
-    shellInit = '' set fish_greeting '';
+    shellInit  = '' set fish_greeting '';
   };
 }

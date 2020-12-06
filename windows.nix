@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
-{
+let
+  unstable = import <nixos-unstable> {};
+in {
   virtualisation.libvirtd = {
     enable = true;
     qemuOvmf = true;
@@ -33,5 +35,6 @@
     virt-manager
     libhugetlbfs
     scream-receivers
+    unstable.looking-glass-client
   ];
 }

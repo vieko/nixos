@@ -18,6 +18,8 @@ let
     ytop
     tree
     xclip
+    etcher
+    woeusb
     killall
     ripgrep
     neofetch
