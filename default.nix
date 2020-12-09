@@ -57,6 +57,7 @@
   # +> HOME MANAGER
   home-manager.users.vieko = (import ./home.nix {
     inherit config pkgs;
+    # nixpkgs.config = import ./config.nix;
   });
 
   # +> SERVICES

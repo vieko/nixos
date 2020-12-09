@@ -6,6 +6,8 @@ let
   unstablePkgs = with unstable; [
     mongodb-compass
     obsidian
+    discord
+    google-chrome
     # _1password-gui
   ];
 
@@ -54,7 +56,6 @@ let
     # steam
     # wine
     # winetricks
-    discord
     spotify
     alacritty
     jetbrains.datagrip
@@ -65,6 +66,7 @@ let
     gimp
     appimage-run
     firefox-devedition-bin
+    # unstable.google-chrome
   ];
 
   gitPkgs = with pkgs.gitAndTools; [
@@ -82,7 +84,7 @@ in {
   # ];
 
   imports = [
-    ./chromium.nix
+    # ./chromium.nix
     ./git.nix
     ./fish.nix
     ./neovim

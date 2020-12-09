@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.chromium = {
+  programs.google-chrome = {
     enable     = true;
     extensions = builtins.attrValues {
       # TODO: finish adding extensions
