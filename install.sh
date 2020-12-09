@@ -22,7 +22,7 @@ sudo cp images/orange-purple.jpg $HOME/Pictures/
 # +> ADD SOURCES AND UPDATE
 sudo nix-channel --add "https://nixos.org/channels/nixos-${NIXOS_VERSION}" nixos
 sudo nix-channel --add "https://nixos.org/channels/nixos-unstable" nixos-unstable
-sudo nix-channel --add "https://github.com/nix-community/home-manager/archive/master.tar.gz" home-manager
+sudo nix-channel --add "https://github.com/nix-community/home-manager/archive/release-20.09.tar.gz" home-manager
 sudo nix-channel --add "https://nixos.org/channels/nixpkgs-unstable" nixpkgs-unstable
 sudo nix-channel --update
 
