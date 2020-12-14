@@ -36,6 +36,7 @@ let
     yarn
     nodejs
     gnumake
+    dnsutils
     coreutils
     # TODO: figure how to add latest vercel via nix
     # now-cli
@@ -140,6 +141,9 @@ in {
     #     }
     #   '';
     # };
+    obs-studio = {
+      enable = true;
+    };
     alacritty ={
       enable = true;
       settings = {
