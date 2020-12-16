@@ -57,6 +57,7 @@ let
     # steam
     # wine
     # winetricks
+    pulseeffects
     spotify
     alacritty
     jetbrains.datagrip
