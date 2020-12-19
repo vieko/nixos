@@ -152,7 +152,7 @@ in {
           TERM = "alacritty";
         };
         window = {
-          title = "SUMMONING DEMONS";
+          title = "♜";
           dynamic_title = false;
           padding = {
             x = 8;
