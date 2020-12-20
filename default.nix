@@ -8,6 +8,7 @@
     ./windows.nix
     ./docker.nix
     ./gnome.nix
+    # ./xmonad.nix
   ];
 
   # +> SUID WRAPPERS
@@ -38,7 +39,7 @@
     wget
     unzip
     insomnia
-    popshell
+    # popshell
     # looking-glass-client
     # lm_sensors
     # unite-shell
@@ -47,7 +48,7 @@
 
   nixpkgs.config.packageOverrides = pkgs: rec {
     insomnia = pkgs.callPackage ./custom/insomnia.nix {};
-    popshell = pkgs.callPackage ./custom/popshell.nix {};
+    # popshell = pkgs.callPackage ./custom/popshell.nix {};
     # looking-glass-client = pkgs.callPackage ./custom/looking-glass-client.nix {};
     # lm_sensors = pkgs.callPackage ./custom/lm-sensors.nix {};
     # unite-shell = pkgs.callPackage ./custom/uniteshell.nix {};

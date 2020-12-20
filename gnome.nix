@@ -10,7 +10,7 @@ in {
       displayManager = {
         gdm = {
           enable = true;
-          wayland = true; 
+          wayland = false; 
           autoSuspend = false;
         };
         sessionCommands = ''
@@ -25,7 +25,7 @@ in {
     # udev.packages = [ pkgs.gnome3.gnome-settings-daemon ];
   };
   environment.systemPackages = with pkgs; [
-    gnome3.gnome-shell-extensions
+    # gnome3.gnome-shell-extensions
     gnome3.networkmanagerapplet
     gnome3.gnome-tweaks
     unstable.dracula-theme
