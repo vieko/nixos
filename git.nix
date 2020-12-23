@@ -2,6 +2,9 @@
 
 let
   gitConfig = {
+    init = {
+      defaultBranch = "main";
+    };
     core = {
       editor = "nvim";
       pager  = "diff-so-fancy | less --tabs=2 -RFX";
