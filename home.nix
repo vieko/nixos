@@ -20,8 +20,8 @@ let
     ytop
     tree
     xclip
-    etcher
-    woeusb
+    # etcher
+    # woeusb
     killall
     ripgrep
     neofetch
@@ -60,12 +60,12 @@ let
     pulseeffects
     spotify
     alacritty
-    jetbrains.datagrip
+    # jetbrains.datagrip
     razergenie
     torrential
     keybase-gui
     libreoffice-fresh
-    gimp
+    # gimp
     appimage-run
     firefox-devedition-bin
     # unstable.google-chrome
