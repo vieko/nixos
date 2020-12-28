@@ -57,6 +57,8 @@ let
     # steam
     # wine
     # winetricks
+    # cozy
+    audacity
     pulseeffects
     spotify
     alacritty
