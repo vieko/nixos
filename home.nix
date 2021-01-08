@@ -4,10 +4,12 @@ let
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 
   unstablePkgs = with unstable; [
+    signal-desktop
     mongodb-compass
     obsidian
     discord
     google-chrome
+    cozy
     # _1password-gui
   ];
 
@@ -30,6 +32,12 @@ let
     psensor
     # usbutils
     # input-fonts
+
+    # TODO: figure out custom buttons for Viper Ultimate
+    # xorg.xev
+    # xvkbd
+    # xbindkeys
+    # xbindkeys-config
   ];
 
   devPkgs = with pkgs; [
