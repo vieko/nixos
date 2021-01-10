@@ -1,5 +1,11 @@
 { config, lib, pkgs, ... }:
 
+# RTX2070 Super FE
+# == kernelParams
+# "vfio_pci.ids=10de:1ec7,10de:10f8,10de:1ad8,10de:1ad9"
+# == postBootCommands
+# DEVS="0000:0e:00.0 0000:0e:00.1 0000:0e:00.2 0000:0e:00.3"
+
 let it87 = config.boot.kernelPackages.callPackage ./custom/it87.nix {};
 in {
   # +> BOOT
@@ -26,7 +32,7 @@ in {
       "pcie_aspm=off" 
       "hugepages=16384" # 2 mb per page x 32GB of ram to be assigned
       # "acpi_enforce_resources=lax"
-      "vfio_pci.ids=10de:1ec7,10de:10f8,10de:1ad8,10de:1ad9" 
+      "vfio_pci.ids=10de:2206,10de:1aef" # RTX3080 OC Gaming 
     ];
     extraModulePackages = [ it87 ];
     extraModprobeConfig = ''
@@ -35,7 +41,7 @@ in {
     '';
     blacklistedKernelModules = [ "nvidia" "nouveau" ];
     postBootCommands = ''
-      DEVS="0000:0e:00.0 0000:0e:00.1 0000:0e:00.2 0000:0e:00.3"
+      DEVS="0000:0e:00.0 0000:0e:00.1"
       for DEV in $DEVS; do
         echo "vfio-pci" > /sys/bus/pci/devices/$DEV/driver_override
       done
