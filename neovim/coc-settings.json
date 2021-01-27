@@ -18,6 +18,8 @@
   "coc.source.around.firstMatch": false,
   "coc.source.buffer.firstMatch": false,
 
+  "css.lint.unknownAtRules": "ignore",
+
   "yank.highlight.duration": 100,
   "yank.highlight.enable": true,
 

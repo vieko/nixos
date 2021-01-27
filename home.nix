@@ -6,7 +6,7 @@ let
   unstablePkgs = with unstable; [
     signal-desktop
     mongodb-compass
-    obsidian
+    # obsidian
     discord
     google-chrome
     cozy
@@ -24,6 +24,7 @@ let
     xclip
     # etcher
     # woeusb
+    unrar
     killall
     ripgrep
     neofetch
@@ -36,8 +37,8 @@ let
     # TODO: figure out custom buttons for Viper Ultimate
     # xorg.xev
     # xvkbd
-    # xbindkeys
-    # xbindkeys-config
+    xbindkeys
+    xbindkeys-config
   ];
 
   devPkgs = with pkgs; [
@@ -66,6 +67,7 @@ let
     # wine
     # winetricks
     # cozy
+    pan
     audacity
     pulseeffects
     spotify
