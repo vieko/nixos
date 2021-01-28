@@ -27,7 +27,7 @@
     networkmanager.enable = true;
     firewall.enable = false;
     useDHCP = false;
-    nameservers = [ "8.8.8.8"  "8.8.4.4" ];
+    nameservers = [ "1.1.1.1"  "1.0.0.1" ];
     enableIPv6 = false;
   };
 
