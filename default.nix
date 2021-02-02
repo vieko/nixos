@@ -8,7 +8,7 @@
     ./windows.nix
     ./docker.nix
     ./gnome.nix
-    ./plex.nix
+    # ./plex.nix
     # ./xmonad.nix
   ];
 
