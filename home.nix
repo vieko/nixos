@@ -25,6 +25,7 @@ let
     # etcher
     # woeusb
     unrar
+    par2cmdline
     killall
     ripgrep
     neofetch
@@ -43,6 +44,7 @@ let
 
   devPkgs = with pkgs; [
     yarn
+    whois
     nodejs
     gnumake
     dnsutils

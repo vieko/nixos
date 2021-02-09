@@ -70,7 +70,7 @@ in {
       ragnarok = "~/Dotfiles/utils/start-glass-scream.sh";
       # +> APP IMAGES
       sizzy    = "nohup appimage-run ~/AppImages/Sizzy-48.1.0.AppImage & disown";
-      obsidian = "nohup appimage-run ~/AppImages/Obsidian-0.10.9.AppImage & disown";
+      obsidian = "nohup appimage-run ~/AppImages/Obsidian-0.10.11.AppImage & disown";
     };
     shellInit  = '' set fish_greeting '';
   };
