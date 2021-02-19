@@ -26,6 +26,7 @@ in {
   };
   environment.systemPackages = with pkgs; [
     # gnome3.gnome-shell-extensions
+    gnome3.vinagre
     gnome3.networkmanagerapplet
     gnome3.gnome-tweaks
     unstable.dracula-theme
