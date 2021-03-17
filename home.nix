@@ -11,6 +11,7 @@ let
     google-chrome
     cozy
     # _1password-gui
+    awscli2
   ];
 
   defaultPkgs = with pkgs; [
