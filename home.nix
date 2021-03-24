@@ -100,6 +100,12 @@ in {
   #   (import ./overlays/lm-sensors.nix)
   # ];
 
+  nixpkgs.overlays = [
+    (self: super: { discord = super.discord.overrideAttrs (_: {
+      src = builtins.fetchTarball https://github.com/reedrw/nixpkgs/archive/refs/heads/update-discord.tar.gz;
+    });})
+  ];
+
   imports = [
     # ./chromium.nix
     ./git.nix
