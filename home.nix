@@ -6,8 +6,9 @@ let
   unstablePkgs = with unstable; [
     signal-desktop
     mongodb-compass
+    jetbrains.datagrip
     # obsidian
-    discord
+    # discord
     google-chrome
     cozy
     # _1password-gui
@@ -75,7 +76,6 @@ let
     pulseeffects
     spotify
     alacritty
-    # jetbrains.datagrip
     razergenie
     torrential
     keybase-gui

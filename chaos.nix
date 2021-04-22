@@ -104,5 +104,10 @@ in {
       enp7s0.useDHCP = true;
       wlp5s0.useDHCP = true;
     };
+    # extraHosts = {
+    #   ''
+    #   localhost.devolverdigital.com localhost:3000
+    #   ''
+    # };
   };
 }
