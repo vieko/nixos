@@ -8,7 +8,7 @@ let
     mongodb-compass
     jetbrains.datagrip
     # obsidian
-    # discord
+    discord
     google-chrome
     cozy
     # _1password-gui
@@ -72,6 +72,7 @@ let
     # winetricks
     # cozy
     pan
+    # discord
     audacity
     pulseeffects
     spotify
