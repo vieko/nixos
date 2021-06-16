@@ -55,8 +55,9 @@ in {
       gr   = "git reset HEAD";
       grv  = "git rev-parse";
       # +> NOW
-      now     = "~/.yarn/bin/vercel";
-      vercel  = "~/.yarn/bin/vercel";
+      now      = "~/.yarn/bin/vercel";
+      vercel   = "~/.yarn/bin/vercel";
+      json2csv = "~/.yarn/bin/json2csv";
       # +> NEOVIM
       vi   = "nvim";
       vim  = "nvim";
@@ -69,7 +70,7 @@ in {
       scream   = "scream-alsa -i virbr0";
       ragnarok = "~/Dotfiles/utils/start-glass-scream.sh";
       # +> APP IMAGES
-      sizzy    = "nohup appimage-run ~/AppImages/Sizzy-48.1.0.AppImage & disown";
+      sizzy    = "nohup appimage-run ~/AppImages/Sizzy-55.2.0.AppImage & disown";
       obsidian = "nohup appimage-run ~/AppImages/Obsidian-0.10.11.AppImage & disown";
     };
     shellInit  = '' set fish_greeting '';

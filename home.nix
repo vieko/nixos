@@ -8,7 +8,7 @@ let
     mongodb-compass
     jetbrains.datagrip
     # obsidian
-    discord
+    insomnia
     google-chrome
     cozy
     # _1password-gui
@@ -32,6 +32,7 @@ let
     ripgrep
     neofetch
     lm_sensors
+    pick-colour-picker
     # rrdtool
     psensor
     # usbutils
@@ -48,6 +49,7 @@ let
     yarn
     whois
     nodejs
+    docker-compose
     gnumake
     dnsutils
     coreutils

@@ -39,7 +39,7 @@
   environment.systemPackages = with pkgs; [
     wget
     unzip
-    insomnia
+    # insomnia
     parsecgaming
     # popshell
     # looking-glass-client
@@ -49,7 +49,7 @@
   ];
 
   nixpkgs.config.packageOverrides = pkgs: rec {
-    insomnia = pkgs.callPackage ./custom/insomnia.nix {};
+    # insomnia = pkgs.callPackage ./custom/insomnia.nix {};
     parsecgaming = pkgs.callPackage ./custom/parsecgaming.nix {};
     # popshell = pkgs.callPackage ./custom/popshell.nix {};
     # looking-glass-client = pkgs.callPackage ./custom/looking-glass-client.nix {};
@@ -71,7 +71,7 @@
   users.users.vieko = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "kvm" "libvirt" "plugdev" "audio"
-    "plex" ];
+    "plex" "docker" ];
     shell = pkgs.fish;
     openssh.authorizedKeys.keys = [
       (builtins.readFile /home/vieko/.ssh/id_rsa.pub)

@@ -2,6 +2,7 @@
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
+    "html",
     "javascript",
     "javascript.jsx",
     "javascriptreact",
