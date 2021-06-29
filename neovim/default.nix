@@ -17,6 +17,7 @@ let
     coc-prettier
     coc-tsserver
     coc-emmet
+    # coc-graphql
     # coc-tailwindcss
   ];
 

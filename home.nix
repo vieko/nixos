@@ -12,7 +12,7 @@ let
     google-chrome
     cozy
     # _1password-gui
-    awscli2
+    vscode
   ];
 
   defaultPkgs = with pkgs; [
@@ -53,6 +53,7 @@ let
     gnumake
     dnsutils
     coreutils
+    awscli2
     # TODO: figure how to add latest vercel via nix
     # now-cli
   ];
