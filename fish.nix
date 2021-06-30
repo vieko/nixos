@@ -58,6 +58,8 @@ in {
       now      = "~/.yarn/bin/vercel";
       vercel   = "~/.yarn/bin/vercel";
       json2csv = "~/.yarn/bin/json2csv";
+      # +> AWS
+      # aws-shell = "~/.local/bin/aws-shell";
       # +> NEOVIM
       vi   = "nvim";
       vim  = "nvim";

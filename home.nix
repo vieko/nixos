@@ -11,6 +11,8 @@ let
     insomnia
     google-chrome
     cozy
+    # awscli2
+    python38Packages.awscrt
     # _1password-gui
     vscode
   ];
@@ -53,7 +55,6 @@ let
     gnumake
     dnsutils
     coreutils
-    awscli2
     # TODO: figure how to add latest vercel via nix
     # now-cli
   ];

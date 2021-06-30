@@ -39,6 +39,7 @@
   environment.systemPackages = with pkgs; [
     wget
     unzip
+    awscli2
     # insomnia
     parsecgaming
     # popshell
@@ -46,7 +47,29 @@
     # lm_sensors
     # unite-shell
     # popshell-shortcuts
+    # python38
+    # python38Packages.pip
+    # python38Packages.setuptools
+    # python38Packages.wheel
   ];
+
+  nixpkgs.overlays = [
+    (
+      self: super: {
+        # https://github.com/NixOS/nixpkgs/issues/127982
+        awscli2 = (
+          import (
+            builtins.fetchTarball {
+              url =
+                "https://github.com/NixOS/nixpkgs/archive/a81163d83b6ede70aa2d5edd8ba60062ed4eec74.tar.gz";
+              sha256 = "0xwi0m97xgl0x38kf9qq8m3ismcd7zajsmb82brfcxw0i2bm3jyl";
+            }
+          ) { config = { allowUnfree = true; }; }
+        ).awscli2;
+      }
+    )
+  ];
+
 
   nixpkgs.config.packageOverrides = pkgs: rec {
     # insomnia = pkgs.callPackage ./custom/insomnia.nix {};
