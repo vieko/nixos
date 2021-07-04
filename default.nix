@@ -47,10 +47,11 @@
     # lm_sensors
     # unite-shell
     # popshell-shortcuts
-    # python38
-    # python38Packages.pip
-    # python38Packages.setuptools
-    # python38Packages.wheel
+    python38
+    python38Packages.pip
+    python38Packages.setuptools
+    python38Packages.wheel
+    python38Packages.cfn-lint
   ];
 
   nixpkgs.overlays = [

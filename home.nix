@@ -77,7 +77,7 @@ let
     # cozy
     pan
     # discord
-    audacity
+    # audacity
     pulseeffects
     spotify
     alacritty
