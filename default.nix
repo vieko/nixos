@@ -31,6 +31,62 @@
     enableIPv6 = false;
   };
 
+  # +> SHARES
+  # services.samba = {
+  #   enable = true;
+  #   extraConfig = ''
+  #     browseable = yes
+  #     smb encrypt = required
+  #   '';
+
+  #   shares = {
+  #     homes = {
+  #       browseable = "no";
+  #       "read only" = "no";
+  #       "guest ok" = "no";
+  #     };
+  #   };
+  # };
+
+  #services.samba = {
+  #  enable = true;
+  #  securityType = "user";
+  #  extraConfig = ''
+  #      #workgroup = WORKGROUP
+  #      #server string = smbnix
+  #      #netbios name = smbnix
+  #      security = user 
+  #      #use sendfile = yes
+  #      #max protocol = smb2
+  #      hosts allow = 192.168.0  localhost
+  #      hosts deny = 0.0.0.0/0
+  #      guest account = nobody
+  #      map to guest = bad user
+  #    '';
+  #  shares = {
+  #      public = {
+  #        path = "/mnt/Shares/Public";
+  #        browseable = "yes";
+  #        "read only" = "no";
+  #        "guest ok" = "yes";
+  #        "create mask" = "0644";
+  #        "directory mask" = "0755";
+  #        # "force user" = "vieko";
+  #        # "force group" = "users";
+  #      };
+  #      private = {
+  #        path = "/mnt/Shares/Private";
+  #        browseable = "yes";
+  #        "read only" = "no";
+  #        "guest ok" = "no";
+  #        "create mask" = "0644";
+  #        "directory mask" = "0755";
+  #        "force user" = "vieko";
+  #        "force group" = "users";
+  #      };
+  #    };
+  #};
+
   # +> LOCALIZATION
   i18n.defaultLocale = "en_US.UTF-8";
   time.timeZone = "America/Edmonton";

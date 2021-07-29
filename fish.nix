@@ -74,6 +74,7 @@ in {
       # +> APP IMAGES
       sizzy    = "nohup appimage-run ~/AppImages/Sizzy-55.2.0.AppImage & disown";
       obsidian = "nohup appimage-run ~/AppImages/Obsidian-0.10.11.AppImage & disown";
+      parsec   = "nohup parsecgaming & disown";
     };
     shellInit  = '' set fish_greeting '';
   };

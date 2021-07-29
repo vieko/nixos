@@ -31,6 +31,7 @@ in {
     gnome3.gnome-tweaks
     unstable.dracula-theme
     gnomeExtensions.sound-output-device-chooser
+    unstable.gnomeExtensions.unite
     # unstable.gnomeExtensions.color-picker
     # gnomeExtensions.dash-to-panel # breaks things
   ];
