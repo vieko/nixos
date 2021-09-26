@@ -15,6 +15,7 @@ let
     python38Packages.awscrt
     # _1password-gui
     vscode
+    discord
   ];
 
   defaultPkgs = with pkgs; [
