@@ -25,13 +25,16 @@ in {
     # udev.packages = [ pkgs.gnome3.gnome-settings-daemon ];
   };
   environment.systemPackages = with pkgs; [
-    # gnome3.gnome-shell-extensions
-    gnome3.vinagre
-    gnome3.networkmanagerapplet
-    gnome3.gnome-tweaks
+    pop-gtk-theme
+    pop-icon-theme
+    networkmanagerapplet
+    gnome.gnome-shell-extensions
+    gnome.dconf-editor
     unstable.dracula-theme
+    unstable.gnomeExtensions.pop-shell
+    # gnomeExtensions.unite
     gnomeExtensions.sound-output-device-chooser
-    unstable.gnomeExtensions.unite
+    gnomeExtensions.just-perfection
     # unstable.gnomeExtensions.color-picker
     # gnomeExtensions.dash-to-panel # breaks things
   ];

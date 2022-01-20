@@ -9,7 +9,7 @@ in {
       ovmf = {
         enable = true;
       };
-      runAsRoot = false;
+      runAsRoot = true;
     };
     onBoot = "ignore";
     onShutdown = "shutdown";

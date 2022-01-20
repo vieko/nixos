@@ -36,6 +36,7 @@ let
     neofetch
     lm_sensors
     pick-colour-picker
+    gnome.dconf-editor
     # rrdtool
     psensor
     # usbutils
@@ -131,6 +132,12 @@ in {
     sessionVariables = {
       EDITOR = "nvim";
     };
+  };
+
+  gtk = {
+    enable = true;
+    theme.name = "Pop-dark";
+    iconTheme.name = "Pop-dark";
   };
 
   # +> PROGRAMS
