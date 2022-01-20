@@ -137,7 +137,7 @@ in {
   gtk = {
     enable = true;
     theme.name = "Pop-dark";
-    iconTheme.name = "Pop-dark";
+    iconTheme.name = "Pop";
   };
 
   # +> PROGRAMS
