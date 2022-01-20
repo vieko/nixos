@@ -18,7 +18,7 @@ in {
           export SDL_VIDEO_X11_VISUALID=
         '';
       };
-      desktopManager.gnome3.enable = true;
+      desktopManager.gnome.enable = true;
       videoDrivers = [ "nvidia" ];
     };
     # dbus.packages = [ pkgs.gnome3.dconf ];

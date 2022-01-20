@@ -71,15 +71,14 @@ let
 in {
   programs.neovim = {
     enable  = true;
-    #extraConfig = vimConfig;
-    #plugins = myVimPlugins;
+    extraConfig = vimConfig;
+    plugins = myVimPlugins;
     withNodeJs = true;
-    withPython = true;
     withPython3 = true;
-    configure =  {
-      customRC = vimConfig;
-      plug.plugins =  myVimPlugins;
-    };
+    # configure =  {
+    #   customRC = vimConfig;
+    #   plug.plugins =  myVimPlugins;
+    # };
   };
 
   xdg.configFile = {

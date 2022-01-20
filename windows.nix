@@ -5,8 +5,12 @@ let
 in {
   virtualisation.libvirtd = {
     enable = true;
-    qemuOvmf = true;
-    qemuRunAsRoot = false;
+    qemu = {
+      ovmf = {
+        enable = true;
+      };
+      runAsRoot = false;
+    };
     onBoot = "ignore";
     onShutdown = "shutdown";
   };
@@ -34,7 +38,7 @@ in {
     hwloc
     virt-manager
     libhugetlbfs
-    scream-receivers
+    # scream-receivers
     unstable.looking-glass-client
   ];
 }

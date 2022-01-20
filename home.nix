@@ -4,13 +4,13 @@ let
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 
   unstablePkgs = with unstable; [
-    signal-desktop
-    mongodb-compass
-    jetbrains.datagrip
-    # obsidian
+    # signal-desktop
+    # mongodb-compass
+    # jetbrains.datagrip
+    obsidian
     insomnia
     google-chrome
-    cozy
+    # cozy
     # awscli2
     python38Packages.awscrt
     # _1password-gui
@@ -23,8 +23,8 @@ let
     iotop
     nvtop
     mtr
+    bottom
     htop
-    ytop
     tree
     xclip
     # etcher
@@ -76,20 +76,20 @@ let
     # wine
     # winetricks
     # cozy
-    pan
+    # pan
     # discord
     # audacity
-    pulseeffects
+    pulseeffects-legacy
     spotify
     alacritty
     razergenie
-    torrential
+    # torrential
+    transmission
     keybase-gui
     libreoffice-fresh
     # gimp
     appimage-run
     firefox-devedition-bin
-    # unstable.google-chrome
   ];
 
   gitPkgs = with pkgs.gitAndTools; [
@@ -124,7 +124,7 @@ in {
   home = {
     username = "vieko";
     homeDirectory = "/home/vieko";
-    stateVersion = "20.09";
+    stateVersion = "21.11";
 
     packages = unstablePkgs ++ defaultPkgs ++ devPkgs ++ shellPkgs ++ appPkgs ++ gitPkgs;
 
