@@ -16,6 +16,7 @@ let
     # _1password-gui
     vscode
     discord
+    dconf2nix
   ];
 
   defaultPkgs = with pkgs; [
@@ -57,6 +58,8 @@ let
     gnumake
     dnsutils
     coreutils
+    # unstable.nodePackages.prisma
+    # unstable.prisma-engines
     # TODO: figure how to add latest vercel via nix
     # now-cli
   ];
@@ -142,6 +145,13 @@ in {
 
   # +> PROGRAMS
   programs = {
+    direnv = {
+      enable = true;
+      nix-direnv = {
+        enable = true;
+        enableFlakes = true;
+      };
+    };
     bat = { 
       enable = true; 
       config = {

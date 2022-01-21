@@ -167,9 +167,10 @@
       options   = "--delete-older-than 7d";
     };
     trustedUsers = [ "root" "vieko" ];
+    # package = pkgs.nixFlakes;
+    # registry.nixpkgs.flake = "nixpkgs/nixos-unstable";
     # extraOptions = ''
-    #   keep-outputs = true
-    #   keep-derivations = true
+    #   experimental-features = nix-command flakes
     # '';
   };
   nixpkgs.config.allowUnfree = true;
