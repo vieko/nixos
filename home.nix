@@ -17,6 +17,7 @@ let
     vscode
     discord
     dconf2nix
+    pscale
   ];
 
   defaultPkgs = with pkgs; [
