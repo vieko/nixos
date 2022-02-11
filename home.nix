@@ -1,7 +1,14 @@
 { config, pkgs, ... }:
 
 let
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+  unstable = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+      permittedInsecurePackages = [
+        "electron-13.6.9"
+      ];
+    };
+  };
 
   unstablePkgs = with unstable; [
     # signal-desktop
@@ -43,6 +50,9 @@ let
     psensor
     # usbutils
     # input-fonts
+    v4l-utils
+    guvcview
+    ffmpeg
 
     # TODO: figure out custom buttons for Viper Ultimate
     # xorg.xev

@@ -54,10 +54,11 @@ in {
       gst  = "git stash";
       gr   = "git reset HEAD";
       grv  = "git rev-parse";
-      # +> NOW
-      now      = "~/.yarn/bin/vercel";
-      vercel   = "~/.yarn/bin/vercel";
-      json2csv = "~/.yarn/bin/json2csv";
+      # +> NODE PACKAGES 
+      now       = "~/.yarn/bin/vercel";
+      vercel    = "~/.yarn/bin/vercel";
+      json2csv  = "~/.yarn/bin/json2csv";
+      speedtest = "~/.yarn/bin/speed-test";
       # +> AWS
       # aws-shell = "~/.local/bin/aws-shell";
       # +> NEOVIM

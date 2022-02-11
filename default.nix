@@ -175,6 +175,10 @@
   };
   nixpkgs.config.allowUnfree = true;
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-13.6.9;"
+  ];
+
   system.stateVersion = "21.11";
 
 }
