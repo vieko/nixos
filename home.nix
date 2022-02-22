@@ -53,6 +53,8 @@ let
     v4l-utils
     guvcview
     ffmpeg
+    sabnzbd
+    ngrok
 
     # TODO: figure out custom buttons for Viper Ultimate
     # xorg.xev
