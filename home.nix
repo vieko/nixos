@@ -4,9 +4,9 @@ let
   unstable = import <nixos-unstable> {
     config = {
       allowUnfree = true;
-      permittedInsecurePackages = [
-        "electron-13.6.9"
-      ];
+      # permittedInsecurePackages = [
+      #   "electron-13.6.9"
+      # ];
     };
   };
 
@@ -14,23 +14,17 @@ let
     # signal-desktop
     # mongodb-compass
     # jetbrains.datagrip
-    obsidian
-    insomnia
-    google-chrome
     # cozy
     # awscli2
     python38Packages.awscrt
     # _1password-gui
-    vscode
-    discord
-    dconf2nix
-    pscale
+    # dconf2nix
   ];
 
   defaultPkgs = with pkgs; [
     iftop
     iotop
-    nvtop
+    # nvtop
     mtr
     bottom
     htop
@@ -64,9 +58,10 @@ let
   ];
 
   devPkgs = with pkgs; [
+    pscale
+    nodejs
     yarn
     whois
-    nodejs
     docker-compose
     gnumake
     dnsutils
@@ -88,6 +83,11 @@ let
   ];
 
   appPkgs = with pkgs; [
+    vscode
+    discord
+    google-chrome
+    insomnia
+    # obsidian
     slack
     # steam
     # wine
