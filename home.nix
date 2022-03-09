@@ -4,13 +4,14 @@ let
   unstable = import <nixos-unstable> {
     config = {
       allowUnfree = true;
-      # permittedInsecurePackages = [
-      #   "electron-13.6.9"
-      # ];
+      permittedInsecurePackages = [
+        "electron-13.6.9"
+      ];
     };
   };
 
   unstablePkgs = with unstable; [
+    obsidian
     # signal-desktop
     # mongodb-compass
     # jetbrains.datagrip
@@ -22,6 +23,7 @@ let
   ];
 
   defaultPkgs = with pkgs; [
+    via
     iftop
     iotop
     # nvtop
@@ -59,7 +61,9 @@ let
 
   devPkgs = with pkgs; [
     pscale
-    nodejs
+    heroku
+    nodejs-16_x
+    nodePackages.typescript
     yarn
     whois
     docker-compose
@@ -87,7 +91,6 @@ let
     discord
     google-chrome
     insomnia
-    # obsidian
     slack
     # steam
     # wine
