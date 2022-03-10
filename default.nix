@@ -22,13 +22,135 @@
   # +> STEAM
   programs.steam.enable = true;
 
+  # networking = {
+  #   networkmanager.enable = true;
+  #   firewall.enable = false;
+  #   useDHCP = false;
+  #   nameservers = [ "1.1.1.1"  "1.0.0.1" ];
+  #   enableIPv6 = false;
+  # };
+
   # +> NETWORKING
   networking = {
-    networkmanager.enable = true;
-    firewall.enable = false;
+    networkmanager = {
+      enable = true;
+      dns = "none";
+    };
+    nameservers = [ "127.0.0.1" "::1" ];
+    resolvconf.useLocalResolver = true;
+    enableIPv6 = true;
     useDHCP = false;
-    nameservers = [ "1.1.1.1"  "1.0.0.1" ];
-    enableIPv6 = false;
+  };
+
+  # +> Encrypted DNS
+  services.dnscrypt-proxy2 = {
+    enable = true;
+
+
+    settings = {
+      # +> GLOBAL SETTINGS
+      # server_names = [ "cloudflare" ];
+      listen_addresses = [ "127.0.0.1:53" "[::1]:53" ];
+      max_clients = 250;
+      ipv4_servers = true;
+      ipv6_servers = true;
+      dnscrypt_servers = true;
+      doh_servers = false;
+      require_dnssec = true;
+      require_nolog = true;
+      require_nofilter = true;
+      force_tcp = false; # for Tor
+      timeout = 5000;
+      bootstrap_resolvers = [ "9.9.9.11:53" "1.1.1.1:53" ];
+      ignore_system_dns = true;
+      netprobe_timeout = 60;
+      netprobe_address = "9.9.9.9:53";
+      log_files_max_size = 10;
+      log_files_max_age = 7;
+      log_files_max_backups = 1;
+
+      # +> FILTERS
+      block_ipv6 = false;
+      block_unqualified = true;
+      block_undelegated = true;
+      reject_ttl = 10;
+
+      # +> DNS CACHE
+      cache = true;
+      cache_size = 4096;
+      cache_min_ttl = 2400;
+      cache_max_ttl = 86400;
+      cache_neg_min_ttl = 60;
+      cache_neg_max_ttl = 600;
+
+      # +> SOURCES
+      sources.public-resolvers = {
+        urls = [
+          "https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md"
+          "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"
+          "https://ipv6.download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"
+        ];
+        cache_file = "/var/lib/dnscrypt-proxy2/public-resolvers.md";
+        minisign_key =
+          "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
+        refresh_delay = 72;
+        prefix = "";
+      };
+      # +> ANONYMIZED DNS RELAY
+      sources.relays = {
+        urls = [
+          "https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/relays.md"
+          "https://download.dnscrypt.info/resolvers-list/v3/relays.md"
+          "https://ipv6.download.dnscrypt.info/resolvers-list/v3/relays.md"
+        ];
+        cache_file = "relays.md";
+        minisign_key =
+          "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
+        refresh_delay = 72;
+        prefix = "";
+      };
+      # +> ODOH SERVERS
+      sources.odoh-servers = {
+        urls = [
+          "https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/odoh-servers.md"
+          "https://download.dnscrypt.info/resolvers-list/v3/odoh-servers.md"
+          "https://ipv6.download.dnscrypt.info/resolvers-list/v3/odoh-servers.md"
+        ];
+        cache_file = "odoh-servers.md";
+        minisign_key =
+          "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
+        refresh_delay = 24;
+        prefix = "";
+      };
+      # +> ODOH RELAYS
+      sources.odoh-relays = {
+        urls = [
+          "https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v3/odoh-relays.md"
+          "https://download.dnscrypt.info/resolvers-list/v3/odoh-relays.md"
+          "https://ipv6.download.dnscrypt.info/resolvers-list/v3/odoh-relays.md"
+        ];
+        cache_file = "odoh-relays.md";
+        minisign_key =
+          "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
+        refresh_delay = 24;
+        prefix = "";
+      };
+      # +> QUAD9
+      sources.quad9-resolvers = {
+        urls = ["https://www.quad9.net/quad9-resolvers.md"];
+        minisign_key =
+          "RWQBphd2+f6eiAqBsvDZEBXBGHQBJfeG6G+wJPPKxCZMoEQYpmoysKUN";
+        cache_file = "quad9-resolvers.md";
+        prefix = "quad9-";
+      };
+
+      # +> BROKEN IMPLEMENTATIONS
+      broken_implementations = {
+        fragments_blocked = [
+          "cisco" "cisco-ipv6" "cisco-familyshield" "cisco-familyshield-ipv6" "cleanbrowsing-adult" "cleanbrowsing-adult-ipv6" "cleanbrowsing-family" "cleanbrowsing-family-ipv6" "cleanbrowsing-security" "cleanbrowsing-security-ipv6"
+        ];
+      };
+    };
   };
 
   # +> SHARES
