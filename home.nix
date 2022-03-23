@@ -109,7 +109,6 @@ let
     libreoffice-fresh
     # gimp
     appimage-run
-    firefox-devedition-bin
   ];
 
   gitPkgs = with pkgs.gitAndTools; [
@@ -194,15 +193,15 @@ in {
     ssh = {
       enable = true;
     };
-    # firefox = {
-    #   enable = true;
-    #   profiles.options.userChrome = ''
-    #     .scroll-styled-h, .scroll-styled-v, html {
-    #       scrollbar-color: #282a36 rgba(255, 255, 255, .0);
-    #       scrollbar-width: thin;
-    #     }
-    #   '';
-    # };
+    firefox = {
+      enable = true;
+      profiles.options.userChrome = ''
+        .scroll-styled-h, .scroll-styled-v, html {
+          scrollbar-color: #282a36 rgba(255, 255, 255, .0);
+          scrollbar-width: thin;
+        }
+      '';
+    };
     obs-studio = {
       enable = true;
     };
