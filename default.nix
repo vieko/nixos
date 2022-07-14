@@ -298,7 +298,8 @@
   nixpkgs.config.allowUnfree = true;
 
   nixpkgs.config.permittedInsecurePackages = [
-    "electron-13.6.9;"
+    "electron-13.6.9"
+    "electron-9.4.4"
   ];
 
   system.stateVersion = "21.11";

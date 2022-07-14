@@ -6,20 +6,19 @@ let
       allowUnfree = true;
       permittedInsecurePackages = [
         "electron-13.6.9"
+        "electron-9.4.4"
       ];
     };
   };
 
   unstablePkgs = with unstable; [
     obsidian
-    # signal-desktop
-    # mongodb-compass
-    # jetbrains.datagrip
-    # cozy
-    # awscli2
+    syncthing
     python38Packages.awscrt
-    # _1password-gui
+    _1password-gui
     # dconf2nix
+    protonvpn-gui
+    protonvpn-cli
   ];
 
   defaultPkgs = with pkgs; [
@@ -51,6 +50,8 @@ let
     ffmpeg
     sabnzbd
     ngrok
+    keepassxc
+    # authy
 
     # TODO: figure out custom buttons for Viper Ultimate
     # xorg.xev
@@ -92,6 +93,7 @@ let
     google-chrome
     insomnia
     slack
+    standardnotes
     # steam
     # wine
     # winetricks
