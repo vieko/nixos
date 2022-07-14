@@ -93,7 +93,7 @@ let
     google-chrome
     insomnia
     slack
-    standardnotes
+    # standardnotes
     # steam
     # wine
     # winetricks
