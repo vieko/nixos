@@ -30,8 +30,8 @@ in buildFHSUserEnv {
     libGL
     libpulseaudio
     libsamplerate
-    libudev
-    # udev
+    # libudev
+    udev
     libva
     libxkbcommon
     nas

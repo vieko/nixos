@@ -147,7 +147,7 @@ in {
   home = {
     username = "vieko";
     homeDirectory = "/home/vieko";
-    stateVersion = "21.11";
+    stateVersion = "22.05";
 
     packages = unstablePkgs ++ defaultPkgs ++ devPkgs ++ shellPkgs ++ appPkgs ++ gitPkgs;
 
@@ -168,7 +168,7 @@ in {
       enable = true;
       nix-direnv = {
         enable = true;
-        enableFlakes = true;
+        # enableFlakes = true;
       };
     };
     bat = { 

@@ -37,7 +37,7 @@ in {
     pciutils
     hwloc
     virt-manager
-    libhugetlbfs
+    unstable.libhugetlbfs
     # scream-receivers
     unstable.looking-glass-client
   ];
