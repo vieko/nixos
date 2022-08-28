@@ -19,6 +19,9 @@ let
     # dconf2nix
     protonvpn-gui
     protonvpn-cli
+    standardnotes
+    ngrok
+    gh
   ];
 
   defaultPkgs = with pkgs; [
@@ -49,7 +52,7 @@ let
     guvcview
     ffmpeg
     sabnzbd
-    ngrok
+    # ngrok
     keepassxc
     # authy
 
@@ -107,7 +110,7 @@ let
     razergenie
     # torrential
     transmission
-    keybase-gui
+    # keybase-gui
     libreoffice-fresh
     # gimp
     appimage-run
@@ -115,7 +118,6 @@ let
 
   gitPkgs = with pkgs.gitAndTools; [
     diff-so-fancy
-    gh
     hub
     tig
   ];
@@ -189,6 +191,9 @@ in {
         "--color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7"
       ];
     };
+    go = {
+      enable = true;
+    };
     gpg = {
       enable = true;
     };
@@ -205,7 +210,7 @@ in {
       '';
     };
     obs-studio = {
-      enable = true;
+      enable = false;
     };
     alacritty ={
       enable = true;
@@ -296,10 +301,7 @@ in {
       enableSshSupport = true;
     };
     kbfs = {
-      enable = true;
-    };
-    keybase = {
-      enable = true;
+      enable = false;
     };
   };
 }

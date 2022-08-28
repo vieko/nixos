@@ -61,6 +61,8 @@ in {
       speedtest = "~/.yarn/bin/speed-test";
       # +> AWS
       # aws-shell = "~/.local/bin/aws-shell";
+      # +> TWITCH
+      twitch = "~/Sandbox/twitch-cli/twitch-cli";
       # +> NEOVIM
       vi   = "nvim";
       vim  = "nvim";

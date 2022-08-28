@@ -230,6 +230,7 @@
     python38Packages.setuptools
     python38Packages.wheel
     python38Packages.cfn-lint
+    # import ./custom/twitch-cli.nix
   ];
 
   nixpkgs.overlays = [
@@ -268,6 +269,10 @@
 
   # +> SERVICES
   services.openssh.enable = true;
+  services.mysql = {
+    enable = true;
+    package = pkgs.mysql;
+  };
 
   # +> USERS
   users.users.vieko = {
