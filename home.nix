@@ -14,7 +14,7 @@ let
   unstablePkgs = with unstable; [
     obsidian
     syncthing
-    python38Packages.awscrt
+    python310Packages.awscrt
     _1password-gui
     # dconf2nix
     protonvpn-gui
