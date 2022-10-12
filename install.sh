@@ -13,7 +13,7 @@ sudo ln -sfn $DOTFILES /etc/dotfiles
 chown -R $USER:users $HOME $DOTFILES
 
 # +> SET USER PROFILE FOR GNOME
-sudo cp images/vieko-avatar-twitter.png /var/lib/AccountsService/icons/vieko
+sudo cp images/vieko-alaskan-loop-hero.png /var/lib/AccountsService/icons/vieko
 
 # +> COPY WALLPAPERS TO PICTURES
 sudo cp images/black-purple.jpg $HOME/Pictures/
@@ -23,7 +23,7 @@ sudo cp images/orange-purple.jpg $HOME/Pictures/
 sudo nix-channel --add "https://nixos.org/channels/nixos-${NIXOS_VERSION}" nixos
 sudo nix-channel --add "https://nixos.org/channels/nixos-unstable" nixos-unstable
 sudo nix-channel --add "https://github.com/nix-community/home-manager/archive/release-${NIXOS_VERSION}.tar.gz" home-manager
-sudo nix-channel --add "https://nixos.org/channels/nixpkgs-unstable" nixpkgs-unstable
+# sudo nix-channel --add "https://nixos.org/channels/nixpkgs-unstable" nixpkgs-unstable
 sudo nix-channel --update
 
 # +> MAKE STUB AND IMPORT
@@ -31,7 +31,7 @@ sudo nixos-generate-config --force
 sudo echo "import /etc/dotfiles" | sudo tee /etc/nixos/configuration.nix
 
 # +> INSTALL
-sudo nixos-rebuild switch
+sudo nixos-rebuild switch --upgrade
 
 ## yarn add global vercel
 

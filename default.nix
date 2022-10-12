@@ -220,6 +220,7 @@
     awscli2
     # insomnia
     parsecgaming
+    # protonvpn-cli
     # popshell
     # looking-glass-client
     # lm_sensors
@@ -230,6 +231,7 @@
     python310Packages.setuptools
     python310Packages.wheel
     python310Packages.cfn-lint
+    # python310Packages.protonvpn-nm-lib
     # import ./custom/twitch-cli.nix
   ];
 
@@ -254,6 +256,7 @@
   nixpkgs.config.packageOverrides = pkgs: rec {
     # insomnia = pkgs.callPackage ./custom/insomnia.nix {};
     parsecgaming = pkgs.callPackage ./custom/parsecgaming.nix {};
+    # protonvpn-cli = pkgs.callPackage ./custom/protonvpn-cli.nix {};
     # popshell = pkgs.callPackage ./custom/popshell.nix {};
     # looking-glass-client = pkgs.callPackage ./custom/looking-glass-client.nix {};
     # lm_sensors = pkgs.callPackage ./custom/lm-sensors.nix {};
@@ -277,6 +280,7 @@
   # +> USERS
   users.users.vieko = {
     isNormalUser = true;
+    uid = 1000;
     extraGroups = [ "wheel" "networkmanager" "kvm" "libvirt" "plugdev" "audio"
     "plex" "docker" ];
     shell = pkgs.fish;

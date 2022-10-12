@@ -31,10 +31,10 @@ in {
     gnome.gnome-shell-extensions
     gnome.dconf-editor
     unstable.dracula-theme
-    unstable.gnomeExtensions.pop-shell
+    gnomeExtensions.pop-shell
     # gnomeExtensions.unite
     gnomeExtensions.sound-output-device-chooser
-    gnomeExtensions.just-perfection
+    unstable.gnomeExtensions.just-perfection
     # unstable.gnomeExtensions.color-picker
     # gnomeExtensions.dash-to-panel # breaks things
   ];

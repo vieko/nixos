@@ -12,19 +12,25 @@ let
   };
 
   unstablePkgs = with unstable; [
+    vscode
     obsidian
     syncthing
     python310Packages.awscrt
+    # python310Packages.protonvpn-nm-lib
     _1password-gui
     # dconf2nix
-    protonvpn-gui
-    protonvpn-cli
     standardnotes
     ngrok
     gh
+    onlyoffice-bin
+    authy
+    sabnzbd
+    protonvpn-gui
+    protonvpn-cli
   ];
 
   defaultPkgs = with pkgs; [
+    hydra-check
     via
     iftop
     iotop
@@ -51,10 +57,10 @@ let
     v4l-utils
     guvcview
     ffmpeg
-    sabnzbd
     # ngrok
     keepassxc
     # authy
+
 
     # TODO: figure out custom buttons for Viper Ultimate
     # xorg.xev
@@ -91,7 +97,7 @@ let
   ];
 
   appPkgs = with pkgs; [
-    vscode
+    # vscode
     discord
     google-chrome
     insomnia
@@ -111,7 +117,7 @@ let
     # torrential
     transmission
     # keybase-gui
-    libreoffice-fresh
+    # libreoffice-fresh
     # gimp
     appimage-run
   ];
