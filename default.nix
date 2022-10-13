@@ -22,30 +22,38 @@
   # +> STEAM
   programs.steam.enable = true;
 
-  # networking = {
-  #   networkmanager.enable = true;
-  #   firewall.enable = false;
-  #   useDHCP = false;
-  #   nameservers = [ "1.1.1.1"  "1.0.0.1" ];
-  #   enableIPv6 = false;
-  # };
-
-  # +> NETWORKING
+  # +> NETWORKING (NextDNS)
   networking = {
     networkmanager = {
       enable = true;
-      dns = "none";
+      dns = "default";
     };
-    nameservers = [ "127.0.0.1" "::1" ];
-    resolvconf.useLocalResolver = true;
+    nameservers = [];
     enableIPv6 = true;
-    useDHCP = false;
   };
+
+  # +> DYNAMIC DNS
+  services.ddclient = {
+    enable = true;
+    configFile = "/home/vieko/Darkness/Secrets/ddclient.conf";
+  };
+
+
+  # +> NETWORKING (Encrypted)
+  # networking = {
+  #   networkmanager = {
+  #     enable = true;
+  #     dns = "none";
+  #   };
+  #   nameservers = [ "127.0.0.1" "::1" ];
+  #   resolvconf.useLocalResolver = true;
+  #   enableIPv6 = true;
+  #   useDHCP = false;
+  # };
 
   # +> Encrypted DNS
   services.dnscrypt-proxy2 = {
-    enable = true;
-
+    enable = false;
 
     settings = {
       # +> GLOBAL SETTINGS
@@ -218,6 +226,7 @@
     wget
     unzip
     awscli2
+    # nextdns
     # insomnia
     parsecgaming
     # protonvpn-cli
@@ -231,7 +240,6 @@
     python310Packages.setuptools
     python310Packages.wheel
     python310Packages.cfn-lint
-    # python310Packages.protonvpn-nm-lib
     # import ./custom/twitch-cli.nix
   ];
 

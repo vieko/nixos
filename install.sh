@@ -23,7 +23,7 @@ sudo cp images/orange-purple.jpg $HOME/Pictures/
 sudo nix-channel --add "https://nixos.org/channels/nixos-${NIXOS_VERSION}" nixos
 sudo nix-channel --add "https://nixos.org/channels/nixos-unstable" nixos-unstable
 sudo nix-channel --add "https://github.com/nix-community/home-manager/archive/release-${NIXOS_VERSION}.tar.gz" home-manager
-# sudo nix-channel --add "https://nixos.org/channels/nixpkgs-unstable" nixpkgs-unstable
+sudo nix-channel --add "https://nixos.org/channels/nixpkgs-unstable" nixpkgs-unstable
 sudo nix-channel --update
 
 # +> MAKE STUB AND IMPORT

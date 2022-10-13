@@ -16,7 +16,6 @@ let
     obsidian
     syncthing
     python310Packages.awscrt
-    # python310Packages.protonvpn-nm-lib
     _1password-gui
     # dconf2nix
     standardnotes
