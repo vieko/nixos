@@ -13,7 +13,7 @@ let
 
   unstablePkgs = with unstable; [
     vscode
-    obsidian
+    # obsidian
     syncthing
     python310Packages.awscrt
     _1password-gui
@@ -26,6 +26,7 @@ let
     sabnzbd
     protonvpn-gui
     protonvpn-cli
+    ventoy-bin
   ];
 
   defaultPkgs = with pkgs; [
@@ -98,6 +99,7 @@ let
   appPkgs = with pkgs; [
     # vscode
     discord
+    # gnome-feeds
     google-chrome
     insomnia
     slack
