@@ -12,6 +12,7 @@ let
   };
 
   unstablePkgs = with unstable; [
+    pscale
     vscode
     # obsidian
     syncthing
@@ -70,7 +71,6 @@ let
   ];
 
   devPkgs = with pkgs; [
-    pscale
     heroku
     nodejs-16_x
     nodePackages.typescript
@@ -116,7 +116,8 @@ let
     alacritty
     razergenie
     # torrential
-    transmission
+    # transmission
+    transmission-gtk
     # keybase-gui
     # libreoffice-fresh
     # gimp
