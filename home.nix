@@ -14,7 +14,7 @@ let
   unstablePkgs = with unstable; [
     pscale
     vscode
-    # obsidian
+    obsidian
     syncthing
     python310Packages.awscrt
     _1password-gui
@@ -58,9 +58,7 @@ let
     v4l-utils
     guvcview
     ffmpeg
-    # ngrok
     keepassxc
-    # authy
 
 
     # TODO: figure out custom buttons for Viper Ultimate
