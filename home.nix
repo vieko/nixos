@@ -31,6 +31,7 @@ let
   ];
 
   defaultPkgs = with pkgs; [
+    # anbox
     hydra-check
     via
     iftop
