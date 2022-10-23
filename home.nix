@@ -12,6 +12,7 @@ let
   };
 
   unstablePkgs = with unstable; [
+    insomnia
     pscale
     vscode
     obsidian
@@ -100,7 +101,7 @@ let
     discord
     # gnome-feeds
     google-chrome
-    insomnia
+    # insomnia
     slack
     # standardnotes
     # steam
