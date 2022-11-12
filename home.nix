@@ -12,6 +12,7 @@ let
   };
 
   unstablePkgs = with unstable; [
+    eyedropper
     insomnia
     pscale
     vscode
@@ -29,6 +30,7 @@ let
     protonvpn-gui
     protonvpn-cli
     ventoy-bin
+    nodePackages.vercel
   ];
 
   defaultPkgs = with pkgs; [

@@ -55,8 +55,8 @@ in {
       gr   = "git reset HEAD";
       grv  = "git rev-parse";
       # +> NODE PACKAGES 
-      now       = "~/.yarn/bin/vercel";
-      vercel    = "~/.yarn/bin/vercel";
+      # now       = "~/.yarn/bin/vercel";
+      # vercel    = "~/.yarn/bin/vercel";
       json2csv  = "~/.yarn/bin/json2csv";
       speedtest = "~/.yarn/bin/speed-test";
       # +> AWS
