@@ -12,6 +12,8 @@ let
   };
 
   unstablePkgs = with unstable; [
+    hyper
+    remmina
     eyedropper
     insomnia
     pscale
