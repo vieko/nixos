@@ -55,8 +55,8 @@ in {
       gr   = "git reset HEAD";
       grv  = "git rev-parse";
       # +> NODE PACKAGES 
-      now       = "~/.yarn/bin/vercel";
-      vercel    = "~/.yarn/bin/vercel";
+      # now       = "~/.yarn/bin/vercel";
+      # vercel    = "~/.yarn/bin/vercel";
       json2csv  = "~/.yarn/bin/json2csv";
       speedtest = "~/.yarn/bin/speed-test";
       # +> AWS
@@ -77,10 +77,11 @@ in {
       # +> APP IMAGES
       passwords = "nohup 1password & disown";
       syncthing = "nohup syncthing & disown";
-      sizzy     = "nohup appimage-run ~/AppImages/Sizzy-55.2.0.AppImage & disown";
-      obsidian  = "nohup appimage-run ~/AppImages/Obsidian-0.10.11.AppImage & disown";
+      sizzy     = "nohup appimage-run ~/AppImages/Sizzy-70.0.0.AppImage & disown";
       parsec    = "nohup parsecgaming & disown";
       sabnzbd   = "nohup sabnzbd & disown";
+      obsidian  = "nohup appimage-run ~/AppImages/Obsidian-1.0.0.AppImage &
+      disown";
     };
     shellInit  = '' set fish_greeting '';
   };

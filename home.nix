@@ -12,19 +12,32 @@ let
   };
 
   unstablePkgs = with unstable; [
+    hyper
+    remmina
+    eyedropper
+    insomnia
+    pscale
+    vscode
     obsidian
     syncthing
-    python38Packages.awscrt
+    python310Packages.awscrt
     _1password-gui
     # dconf2nix
-    protonvpn-gui
-    protonvpn-cli
     standardnotes
     ngrok
     gh
+    onlyoffice-bin
+    authy
+    sabnzbd
+    protonvpn-gui
+    protonvpn-cli
+    ventoy-bin
+    nodePackages.vercel
   ];
 
   defaultPkgs = with pkgs; [
+    # anbox
+    hydra-check
     via
     iftop
     iotop
@@ -51,10 +64,8 @@ let
     v4l-utils
     guvcview
     ffmpeg
-    sabnzbd
-    # ngrok
     keepassxc
-    # authy
+
 
     # TODO: figure out custom buttons for Viper Ultimate
     # xorg.xev
@@ -64,7 +75,6 @@ let
   ];
 
   devPkgs = with pkgs; [
-    pscale
     heroku
     nodejs-16_x
     nodePackages.typescript
@@ -91,10 +101,11 @@ let
   ];
 
   appPkgs = with pkgs; [
-    vscode
+    # vscode
     discord
+    # gnome-feeds
     google-chrome
-    insomnia
+    # insomnia
     slack
     # standardnotes
     # steam
@@ -109,9 +120,10 @@ let
     alacritty
     razergenie
     # torrential
-    transmission
+    # transmission
+    transmission-gtk
     # keybase-gui
-    libreoffice-fresh
+    # libreoffice-fresh
     # gimp
     appimage-run
   ];
@@ -147,7 +159,7 @@ in {
   home = {
     username = "vieko";
     homeDirectory = "/home/vieko";
-    stateVersion = "21.11";
+    stateVersion = "22.05";
 
     packages = unstablePkgs ++ defaultPkgs ++ devPkgs ++ shellPkgs ++ appPkgs ++ gitPkgs;
 
@@ -168,7 +180,7 @@ in {
       enable = true;
       nix-direnv = {
         enable = true;
-        enableFlakes = true;
+        # enableFlakes = true;
       };
     };
     bat = { 

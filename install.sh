@@ -5,7 +5,7 @@ set +x
 USER=vieko
 HOST=chaos
 HOME=/home/$USER
-NIXOS_VERSION=21.11
+NIXOS_VERSION=22.05
 DOTFILES=$HOME/Dotfiles
 
 # +> SET TARGET AND PERMISSIONS 
@@ -13,7 +13,7 @@ sudo ln -sfn $DOTFILES /etc/dotfiles
 chown -R $USER:users $HOME $DOTFILES
 
 # +> SET USER PROFILE FOR GNOME
-sudo cp images/vieko-avatar-twitter.png /var/lib/AccountsService/icons/vieko
+sudo cp images/vieko-alaskan-loop-hero.png /var/lib/AccountsService/icons/vieko
 
 # +> COPY WALLPAPERS TO PICTURES
 sudo cp images/black-purple.jpg $HOME/Pictures/
@@ -31,7 +31,7 @@ sudo nixos-generate-config --force
 sudo echo "import /etc/dotfiles" | sudo tee /etc/nixos/configuration.nix
 
 # +> INSTALL
-sudo nixos-rebuild switch
+sudo nixos-rebuild switch --upgrade
 
 ## yarn add global vercel
 

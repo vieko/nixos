@@ -22,30 +22,38 @@
   # +> STEAM
   programs.steam.enable = true;
 
-  # networking = {
-  #   networkmanager.enable = true;
-  #   firewall.enable = false;
-  #   useDHCP = false;
-  #   nameservers = [ "1.1.1.1"  "1.0.0.1" ];
-  #   enableIPv6 = false;
-  # };
-
-  # +> NETWORKING
+  # +> NETWORKING (NextDNS)
   networking = {
     networkmanager = {
       enable = true;
-      dns = "none";
+      dns = "default";
     };
-    nameservers = [ "127.0.0.1" "::1" ];
-    resolvconf.useLocalResolver = true;
+    nameservers = [];
     enableIPv6 = true;
-    useDHCP = false;
   };
+
+  # +> DYNAMIC DNS
+  services.ddclient = {
+    enable = true;
+    configFile = "/home/vieko/Darkness/Secrets/ddclient.conf";
+  };
+
+
+  # +> NETWORKING (Encrypted)
+  # networking = {
+  #   networkmanager = {
+  #     enable = true;
+  #     dns = "none";
+  #   };
+  #   nameservers = [ "127.0.0.1" "::1" ];
+  #   resolvconf.useLocalResolver = true;
+  #   enableIPv6 = true;
+  #   useDHCP = false;
+  # };
 
   # +> Encrypted DNS
   services.dnscrypt-proxy2 = {
-    enable = true;
-
+    enable = false;
 
     settings = {
       # +> GLOBAL SETTINGS
@@ -218,18 +226,20 @@
     wget
     unzip
     awscli2
+    # nextdns
     # insomnia
     parsecgaming
+    # protonvpn-cli
     # popshell
     # looking-glass-client
     # lm_sensors
     # unite-shell
     # popshell-shortcuts
-    python38
-    python38Packages.pip
-    python38Packages.setuptools
-    python38Packages.wheel
-    python38Packages.cfn-lint
+    python310
+    python310Packages.pip
+    python310Packages.setuptools
+    python310Packages.wheel
+    python310Packages.cfn-lint
     # import ./custom/twitch-cli.nix
   ];
 
@@ -254,6 +264,7 @@
   nixpkgs.config.packageOverrides = pkgs: rec {
     # insomnia = pkgs.callPackage ./custom/insomnia.nix {};
     parsecgaming = pkgs.callPackage ./custom/parsecgaming.nix {};
+    # protonvpn-cli = pkgs.callPackage ./custom/protonvpn-cli.nix {};
     # popshell = pkgs.callPackage ./custom/popshell.nix {};
     # looking-glass-client = pkgs.callPackage ./custom/looking-glass-client.nix {};
     # lm_sensors = pkgs.callPackage ./custom/lm-sensors.nix {};
@@ -277,6 +288,7 @@
   # +> USERS
   users.users.vieko = {
     isNormalUser = true;
+    uid = 1000;
     extraGroups = [ "wheel" "networkmanager" "kvm" "libvirt" "plugdev" "audio"
     "plex" "docker" ];
     shell = pkgs.fish;
@@ -294,6 +306,7 @@
       options   = "--delete-older-than 7d";
     };
     trustedUsers = [ "root" "vieko" ];
+    settings.experimental-features = "nix-command flakes";
     # package = pkgs.nixFlakes;
     # registry.nixpkgs.flake = "nixpkgs/nixos-unstable";
     # extraOptions = ''
@@ -307,7 +320,7 @@
     "electron-9.4.4"
   ];
 
-  system.stateVersion = "21.11";
+  system.stateVersion = "22.05";
 
 }
 

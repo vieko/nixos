@@ -21,9 +21,9 @@ let
     # coc-tailwindcss
   ];
 
+  optPlugins = with plugins; [{plugin = coc-nvim; optional = true;}];
+
   myVimPlugins = with plugins; [
-    # == completion
-    coc-nvim
     # == explorer
     defx-nvim
     defx-icons
@@ -54,7 +54,7 @@ let
     vim-rhubarb
     # == themes
     dracula-vim
-  ] ++ cocPlugins;
+  ] ++ cocPlugins ++ optPlugins;
 
   # TODO fix cursor disappears when entering insert mode
   base      = builtins.readFile ./config.vim;
@@ -66,8 +66,9 @@ let
   abbrs     = builtins.readFile ./abbrs.vim;
   commands  = builtins.readFile ./commands.vim;
   auto      = builtins.readFile ./autocmd.vim;
+  coc       = builtins.readFile ./coc.vim;
   vimConfig = base + status + explorer + leader + plugs + remap + abbrs +
-  commands + auto;
+  commands + auto + coc;
 in {
   programs.neovim = {
     enable  = true;
@@ -75,10 +76,7 @@ in {
     plugins = myVimPlugins;
     withNodeJs = true;
     withPython3 = true;
-    # configure =  {
-    #   customRC = vimConfig;
-    #   plug.plugins =  myVimPlugins;
-    # };
+    package = pkgs.neovim-unwrapped;
   };
 
   xdg.configFile = {
