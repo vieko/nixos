@@ -159,7 +159,7 @@ in {
   home = {
     username = "vieko";
     homeDirectory = "/home/vieko";
-    stateVersion = "22.05";
+    stateVersion = "22.11";
 
     packages = unstablePkgs ++ defaultPkgs ++ devPkgs ++ shellPkgs ++ appPkgs ++ gitPkgs;
 
