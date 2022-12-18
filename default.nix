@@ -320,7 +320,7 @@
     "electron-9.4.4"
   ];
 
-  system.stateVersion = "22.05";
+  system.stateVersion = "22.11";
 
 }
 
