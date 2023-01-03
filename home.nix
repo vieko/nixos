@@ -12,6 +12,10 @@ let
   };
 
   unstablePkgs = with unstable; [
+    fractal
+    signal-desktop
+    prisma-engines
+    nodePackages.prisma
     hyper
     remmina
     eyedropper
@@ -76,7 +80,8 @@ let
 
   devPkgs = with pkgs; [
     heroku
-    nodejs-16_x
+    # nodejs-16_x
+    nodejs-18_x
     nodePackages.typescript
     yarn
     whois
