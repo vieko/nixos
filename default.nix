@@ -218,7 +218,24 @@
   #};
 
   # +> LOCALIZATION
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n = {
+    defaultLocale = "en_CA.UTF-8";
+    extraLocaleSettings = {
+      LANG = "en_CA.UTF-8";
+      LC_CTYPE = "en_CA.UTF-8";
+      LC_NUMERIC = "en_CA.UTF-8";
+      LC_TIME = "en_CA.UTF-8";
+      LC_COLLATE = "en_CA.UTF-8";
+      LC_MONETARY = "en_CA.UTF-8";
+      LC_MESSAGES = "en_CA.UTF-8";
+      LC_PAPER = "en_CA.UTF-8";
+      LC_NAME = "en_CA.UTF-8";
+      LC_ADDRESS = "en_CA.UTF-8";
+      LC_TELEPHONE = "en_CA.UTF-8";
+      LC_MEASUREMENT = "en_CA.UTF-8";
+      LC_IDENTIFICATION = "en_CA.UTF-8";
+    };
+  };
   time.timeZone = "America/Edmonton";
 
   # +> PACKAGES
@@ -228,7 +245,7 @@
     awscli2
     # nextdns
     # insomnia
-    parsecgaming
+    # parsecgaming
     # protonvpn-cli
     # popshell
     # looking-glass-client
@@ -263,7 +280,7 @@
 
   nixpkgs.config.packageOverrides = pkgs: rec {
     # insomnia = pkgs.callPackage ./custom/insomnia.nix {};
-    parsecgaming = pkgs.callPackage ./custom/parsecgaming.nix {};
+    # parsecgaming = pkgs.callPackage ./custom/parsecgaming.nix {};
     # protonvpn-cli = pkgs.callPackage ./custom/protonvpn-cli.nix {};
     # popshell = pkgs.callPackage ./custom/popshell.nix {};
     # looking-glass-client = pkgs.callPackage ./custom/looking-glass-client.nix {};
@@ -299,14 +316,16 @@
 
   # +> CONFIG
   nix = {
-    autoOptimiseStore = true;
     gc = {
       automatic = true;
       dates     = "weekly";
       options   = "--delete-older-than 7d";
     };
-    trustedUsers = [ "root" "vieko" ];
-    settings.experimental-features = "nix-command flakes";
+    settings = {
+      experimental-features = "nix-command flakes";
+      trusted-users = [ "root" "vieko" ];
+      auto-optimise-store = true;
+    };
     # package = pkgs.nixFlakes;
     # registry.nixpkgs.flake = "nixpkgs/nixos-unstable";
     # extraOptions = ''

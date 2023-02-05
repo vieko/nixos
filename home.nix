@@ -13,10 +13,12 @@ let
 
   unstablePkgs = with unstable; [
     fractal
+    parsec-bin
     signal-desktop
     prisma-engines
     nodePackages.prisma
     hyper
+    httrack
     remmina
     eyedropper
     insomnia

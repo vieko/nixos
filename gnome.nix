@@ -25,18 +25,19 @@ in {
     # udev.packages = [ pkgs.gnome3.gnome-settings-daemon ];
   };
   environment.systemPackages = with pkgs; [
+    networkmanagerapplet
     pop-gtk-theme
     pop-icon-theme
-    networkmanagerapplet
     gnome.gnome-shell-extensions
     gnome.dconf-editor
-    unstable.dracula-theme
     gnomeExtensions.pop-shell
+    unstable.pop-launcher
     # gnomeExtensions.unite
-    gnomeExtensions.sound-output-device-chooser
+    # gnomeExtensions.sound-output-device-chooser
+    # gnomeExtensions.dash-to-panel # breaks things
+    unstable.dracula-theme
     unstable.gnomeExtensions.just-perfection
     # unstable.gnomeExtensions.color-picker
-    # gnomeExtensions.dash-to-panel # breaks things
   ];
 
   systemd.targets.sleep.enable = false;

@@ -78,7 +78,7 @@ in {
       passwords = "nohup 1password & disown";
       syncthing = "nohup syncthing & disown";
       sizzy     = "nohup appimage-run ~/AppImages/Sizzy-70.0.0.AppImage & disown";
-      parsec    = "nohup parsecgaming & disown";
+      # parsec    = "nohup parsecgaming & disown";
       sabnzbd   = "nohup sabnzbd & disown";
       obsidian  = "nohup appimage-run ~/AppImages/Obsidian-1.0.0.AppImage &
       disown";

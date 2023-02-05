@@ -18,7 +18,7 @@
   };
 
   # +> CPU
-  nix.maxJobs = lib.mkDefault "auto";
+  nix.settings.max-jobs = lib.mkDefault "auto";
   powerManagement.cpuFreqGovernor = "performance";
   hardware.video.hidpi.enable = lib.mkDefault true;
 
