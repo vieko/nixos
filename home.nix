@@ -12,7 +12,8 @@ let
   };
 
   unstablePkgs = with unstable; [
-    fractal
+    gam
+    # fractal
     parsec-bin
     signal-desktop
     prisma-engines
