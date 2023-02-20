@@ -75,12 +75,9 @@ in {
       scream   = "scream-alsa -i virbr0";
       ragnarok = "~/Dotfiles/utils/start-glass-scream.sh";
       # +> APP IMAGES
-      passwords = "nohup 1password & disown";
-      syncthing = "nohup syncthing & disown";
-      sizzy     = "nohup appimage-run ~/AppImages/Sizzy-70.0.0.AppImage & disown";
-      # parsec    = "nohup parsecgaming & disown";
-      sabnzbd   = "nohup sabnzbd & disown";
-      obsidian  = "nohup appimage-run ~/AppImages/Obsidian-1.0.0.AppImage &
+      syncthing = "nohup syncthing >/dev/null 2>&1 & disown";
+      sabnzbd   = "nohup sabnzbd >/dev/null 2>&1 & disown";
+      pico8     = "nohup nix-shell ~/Applications/pico-8/ >/dev/null 2>&1 &
       disown";
     };
     shellInit  = '' set fish_greeting '';

@@ -43,6 +43,7 @@ let
   ];
 
   defaultPkgs = with pkgs; [
+    # pico8-shell
     # anbox
     hydra-check
     via
@@ -158,6 +159,7 @@ in {
 
   imports = [
     # ./chromium.nix
+    # ./pico.nix
     ./git.nix
     ./fish.nix
     ./neovim
