@@ -19,6 +19,16 @@
     pinentryFlavor = "gnome3";
   };
 
+  # +> CLAMAV
+  services.clamav = {
+    daemon.enable = true;
+    updater = {
+      enable = true;
+      frequency = 12;
+      interval = "hourly";
+    };
+  };
+
   # +> STEAM
   programs.steam.enable = true;
 
@@ -243,6 +253,7 @@
     wget
     unzip
     awscli2
+    openssl
     # nextdns
     # insomnia
     # parsecgaming
@@ -252,30 +263,30 @@
     # lm_sensors
     # unite-shell
     # popshell-shortcuts
-    python310
-    python310Packages.pip
-    python310Packages.setuptools
-    python310Packages.wheel
-    python310Packages.cfn-lint
+    python39
+    python39Packages.pip
+    python39Packages.setuptools
+    python39Packages.wheel
+    python39Packages.cfn-lint
     # import ./custom/twitch-cli.nix
   ];
 
-  nixpkgs.overlays = [
-    (
-      self: super: {
-        # https://github.com/NixOS/nixpkgs/issues/127982
-        awscli2 = (
-          import (
-            builtins.fetchTarball {
-              url =
-                "https://github.com/NixOS/nixpkgs/archive/a81163d83b6ede70aa2d5edd8ba60062ed4eec74.tar.gz";
-              sha256 = "0xwi0m97xgl0x38kf9qq8m3ismcd7zajsmb82brfcxw0i2bm3jyl";
-            }
-          ) { config = { allowUnfree = true; }; }
-        ).awscli2;
-      }
-    )
-  ];
+  # nixpkgs.overlays = [
+  #   (
+  #     self: super: {
+  #       # https://github.com/NixOS/nixpkgs/issues/127982
+  #       awscli2 = (
+  #         import (
+  #           builtins.fetchTarball {
+  #             url =
+  #               "https://github.com/NixOS/nixpkgs/archive/a81163d83b6ede70aa2d5edd8ba60062ed4eec74.tar.gz";
+  #             sha256 = "0xwi0m97xgl0x38kf9qq8m3ismcd7zajsmb82brfcxw0i2bm3jyl";
+  #           }
+  #         ) { config = { allowUnfree = true; }; }
+  #       ).awscli2;
+  #     }
+  #   )
+  # ];
 
 
   nixpkgs.config.packageOverrides = pkgs: rec {

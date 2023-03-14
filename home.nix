@@ -7,12 +7,18 @@ let
       permittedInsecurePackages = [
         "electron-13.6.9"
         "electron-9.4.4"
+        "python-2.7.18.6"
       ];
     };
   };
 
   unstablePkgs = with unstable; [
+    # clamav
+    godot_4
+    tiled
+    aseprite-unfree
     gam
+    # nextdns
     # fractal
     parsec-bin
     signal-desktop
@@ -27,7 +33,7 @@ let
     vscode
     obsidian
     syncthing
-    python310Packages.awscrt
+    python39Packages.awscrt
     _1password-gui
     # dconf2nix
     standardnotes
