@@ -263,11 +263,11 @@
     # lm_sensors
     # unite-shell
     # popshell-shortcuts
-    python39
-    python39Packages.pip
-    python39Packages.setuptools
-    python39Packages.wheel
-    python39Packages.cfn-lint
+    python310
+    python310Packages.pip
+    python310Packages.setuptools
+    python310Packages.wheel
+    python310Packages.cfn-lint
     # import ./custom/twitch-cli.nix
   ];
 

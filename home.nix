@@ -13,9 +13,10 @@ let
   };
 
   unstablePkgs = with unstable; [
+    # beekeeper-studio
     # clamav
-    godot_4
-    tiled
+    # godot_4
+    # tiled
     aseprite-unfree
     gam
     # nextdns
@@ -33,7 +34,7 @@ let
     vscode
     obsidian
     syncthing
-    python39Packages.awscrt
+    python310Packages.awscrt
     _1password-gui
     # dconf2nix
     standardnotes
@@ -42,13 +43,13 @@ let
     onlyoffice-bin
     authy
     sabnzbd
-    protonvpn-gui
-    protonvpn-cli
     ventoy-bin
     nodePackages.vercel
   ];
 
   defaultPkgs = with pkgs; [
+    protonvpn-gui
+    protonvpn-cli
     # pico8-shell
     # anbox
     hydra-check
@@ -122,6 +123,7 @@ let
     google-chrome
     # insomnia
     slack
+    audacity
     # standardnotes
     # steam
     # wine
@@ -257,19 +259,19 @@ in {
         font = {
           size = 11;
           normal = {
-            family = "Input Mono Narrow";
+            family = "MonoLisa M23";
             style = "Regular";
           };
           bold = {
-            family = "Input Mono Narrow";
+            family = "MonoLisa M23";
             style = "Bold";
           };
           italic = {
-            family = "Input Mono Narrow";
+            family = "MonoLisa M23";
             style = "Italic";
           };
           bold_italic = {
-            family = "Input Mono Narrow";
+            family = "MonoLisa M23";
             style = "Bold Italic";
           };
         };
