@@ -260,19 +260,19 @@ in {
           size = 11;
           normal = {
             family = "MonoLisa M23";
-            style = "Regular";
+            style = "Medium";
           };
           bold = {
             family = "MonoLisa M23";
-            style = "Bold";
+            style = "Semibold";
           };
           italic = {
             family = "MonoLisa M23";
-            style = "Italic";
+            style = "Medium Italic";
           };
           bold_italic = {
             family = "MonoLisa M23";
-            style = "Bold Italic";
+            style = "Semibold Italic";
           };
         };
         colors = {
