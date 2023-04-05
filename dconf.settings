@@ -10,13 +10,13 @@ interface-hide-on-startup=false
 interface-menu-bar-disabled=true
 interface-sensorlist-position=0
 interface-window-decoration-disabled=false
-interface-window-divider-pos=796
-interface-window-h=295
+interface-window-divider-pos=2058
+interface-window-h=1440
 interface-window-keep-below-enabled=false
 interface-window-restore-enabled=true
-interface-window-w=1298
-interface-window-x=2578
-interface-window-y=1092
+interface-window-w=2560
+interface-window-x=2560
+interface-window-y=0
 notif-script=''
 provider-atiadlsdk-enabled=true
 provider-gtop2-enabled=true
@@ -30,17 +30,22 @@ slog-enabled=true
 slog-interval=300
 
 [ca/desrt/dconf-editor]
-saved-pathbar-path='/org/gnome/desktop/interface/monospace-font-name'
-saved-view='/org/gnome/desktop/interface/monospace-font-name'
+saved-pathbar-path='pop'
+saved-view='/org/gnome/'
 show-warning=false
-window-height=1377
+window-height=889
 window-is-maximized=false
-window-width=1268
+window-width=1330
 
 [com/github/davidmhewitt/torrential/settings]
 download-folder='/home/vieko/Downloads'
 window-height=353
 window-width=1101
+
+[com/github/finefindus/eyedropper]
+is-maximized=false
+window-height=469
+window-width=338
 
 [com/github/geigi/cozy]
 dark-mode=true
@@ -617,13 +622,29 @@ state=false
 [com/github/wwmm/pulseeffects/spectrum]
 type='Bars'
 
+[org/freedesktop/tracker/miner/files]
+index-recursive-directories=@as []
+index-single-directories=['&DOWNLOAD']
+
 [org/gnome/Characters]
 recent-characters=['🎵', '𝄞', '🚣', '🛥', '💥', '🍹', '🐳', '🙂', 'ñ']
+
+[org/gnome/Connections]
+first-run=false
+
+[org/gnome/Fractal]
+main-window-state-height=1353
+main-window-state-maximized=false
+main-window-state-width=1012
+main-window-state-x=1540
+main-window-state-y=32
 
 [org/gnome/Geary]
 folder-list-pane-position-horizontal=100
 messages-pane-position=351
 migrated-config=true
+window-height=1400
+window-width=1652
 
 [org/gnome/Music]
 did-initial-state=true
@@ -631,8 +652,13 @@ window-maximized=false
 window-position=[1007, 38]
 window-size=[1262, 1011]
 
+[org/gnome/TextEditor]
+highlight-current-line=true
+last-save-directory='file:///home/vieko/Downloads'
+show-grid=false
+
 [org/gnome/Totem]
-active-plugins=['screenshot', 'recent', 'skipto', 'save-file', 'apple-trailers', 'movie-properties', 'screensaver', 'variable-rate', 'autoload-subtitles', 'open-directory', 'vimeo', 'rotation', 'media-player-keys']
+active-plugins=['mpris', 'screenshot', 'recent', 'skipto', 'save-file', 'apple-trailers', 'movie-properties', 'screensaver', 'variable-rate', 'autoload-subtitles', 'open-directory', 'vimeo', 'rotation']
 subtitle-encoding='UTF-8'
 
 [org/gnome/Weather]
@@ -657,28 +683,56 @@ word-size=64
 [org/gnome/calendar]
 active-view='month'
 window-maximized=false
-window-position=(739, 392)
-window-size=(1268, 653)
+window-position=(8, 32)
+window-size=(1652, 1400)
 
 [org/gnome/cheese]
 burst-delay=1000
-camera='Video Capture 4'
-photo-x-resolution=640
-photo-y-resolution=480
+camera='Logitech StreamCam'
+photo-x-resolution=1920
+photo-y-resolution=1080
 selected-effect='No Effect'
-video-x-resolution=640
-video-y-resolution=480
+video-x-resolution=1920
+video-y-resolution=1080
 
 [org/gnome/clocks]
-world-clocks=[{'location': <(uint32 2, <('Seattle', 'KBFI', true, [(0.82983133145337307, -2.134775231953554)], [(0.83088509144255718, -2.135097419733472)])>)>}, {'location': <(uint32 2, <('Austin', 'KATT', true, [(0.52912565738071171, -1.7063502378508868)], [(0.5282614750548793, -1.7059382354276611)])>)>}, {'location': <(uint32 2, <('Montreal', 'CYUL', true, [(0.79354303905785273, -1.2871803233458181)], [(0.79354303905785273, -1.2871803233458181)])>)>}, {'location': <(uint32 2, <('London', 'EGWU', false, [(0.89971722940307675, -0.007272211034407213)], [(0.89971722940307675, -0.007272211034407213)])>)>}, {'location': <(uint32 2, <('Oslo', 'ENGM', true, [(1.0506882097005865, 0.19344065294494067)], [(1.0457431159710333, 0.18762289458939041)])>)>}, {'location': <(uint32 2, <('Sydney', 'YSSY', true, [(-0.59253928105207498, 2.6386469349889961)], [(-0.59137572239964786, 2.6392287230418559)])>)>}]
+world-clocks=[{'location': <(uint32 2, <('Seattle', 'KBFI', true, [(0.82983133145337307, -2.134775231953554)], [(0.83088509144255718, -2.135097419733472)])>)>}, {'location': <(uint32 2, <('Austin', 'KATT', true, [(0.52912565738071171, -1.7063502378508868)], [(0.5282614750548793, -1.7059382354276611)])>)>}, {'location': <(uint32 2, <('Montreal', 'CYUL', true, [(0.79354303905785273, -1.2871803233458181)], [(0.79354303905785273, -1.2871803233458181)])>)>}, {'location': <(uint32 2, <('London', 'EGWU', false, [(0.89971722940307675, -0.007272211034407213)], [(0.89971722940307675, -0.007272211034407213)])>)>}, {'location': <(uint32 2, <('Oslo', 'ENGM', false, [(1.0506882097005865, 0.19344065294494067)], [(1.0506882097005865, 0.19344065294494067)])>)>}, {'location': <(uint32 2, <('Sydney', 'YSSY', true, [(-0.59253928105207498, 2.6386469349889961)], [(-0.59137572239964786, 2.6392287230418559)])>)>}]
+
+[org/gnome/clocks/state/window]
+maximized=false
+panel-id='world'
+size=(1268, 1424)
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='notifications'
+window-state=(896, 1178, false)
+
+[org/gnome/desktop/a11y/applications]
+screen-magnifier-enabled=false
+screen-reader-enabled=false
+
+[org/gnome/desktop/a11y/magnifier]
+mag-factor=4.0
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'YaST']
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
 
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/vieko/.local/share/backgrounds/2022-01-20-15-44-10-macOS-Monterey-Apple-Stock-Wallpaper-still-2.jpg'
+picture-uri='file:///home/vieko/.local/share/backgrounds/2021-02-15-17-55-12-pawel-czerwinski-n3cF0fLmZaI-unsplash.jpg'
+picture-uri-dark='file:///home/vieko/.local/share/backgrounds/2021-02-15-17-55-12-pawel-czerwinski-n3cF0fLmZaI-unsplash.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -686,7 +740,7 @@ secondary-color='#000000000000'
 show-weekdate=true
 
 [org/gnome/desktop/datetime]
-automatic-timezone=true
+automatic-timezone=false
 
 [org/gnome/desktop/file-sharing]
 require-password='never'
@@ -700,22 +754,31 @@ xkb-options=['terminate:ctrl_alt_bksp', 'lv3:ralt_switch']
 [org/gnome/desktop/interface]
 clock-format='24h'
 clock-show-date=false
+color-scheme='prefer-dark'
+cursor-size=24
 document-font-name='Roboto Slab Regular 11'
-enable-animations=true
+enable-animations=false
+enable-hot-corners=false
 font-antialiasing='grayscale'
 font-hinting='none'
 font-name='Fira Sans Book 10'
-gtk-im-module='gtk-im-context-simple'
 gtk-theme='Pop-dark'
 icon-theme='Pop'
 monospace-font-name='Fira Mono Regular 11'
+toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['gnome-network-panel', 'chromium-browser', 'slack', 'discord', 'steam', 'org-gnome-nautilus', 'spotify', 'virt-manager', 'org-gnome-fileroller', 'calc', 'gnome-printers-panel', 'alacritty', 'google-chrome', 'draw', 'gnome-control-center', 'org-gnome-screenshot', 'com-github-davidmhewitt-torrential', 'mongodb-compass', 'org-gnome-totem', 'org-gnome-gedit', 'signal-desktop', 'writer', 'psensor']
-show-banners=true
+application-children=['gnome-network-panel', 'chromium-browser', 'slack', 'discord', 'steam', 'org-gnome-nautilus', 'spotify', 'virt-manager', 'org-gnome-fileroller', 'calc', 'gnome-printers-panel', 'alacritty', 'google-chrome', 'draw', 'gnome-control-center', 'org-gnome-screenshot', 'com-github-davidmhewitt-torrential', 'mongodb-compass', 'org-gnome-totem', 'org-gnome-gedit', 'signal-desktop', 'writer', 'psensor', 'firefox', 'authy', 'transmission-gtk']
+show-banners=false
+show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/alacritty]
 application-id='Alacritty.desktop'
+enable=true
+
+[org/gnome/desktop/notifications/application/authy]
+application-id='authy.desktop'
+enable=true
 
 [org/gnome/desktop/notifications/application/calc]
 application-id='calc.desktop'
@@ -731,6 +794,9 @@ application-id='discord.desktop'
 
 [org/gnome/desktop/notifications/application/draw]
 application-id='draw.desktop'
+
+[org/gnome/desktop/notifications/application/firefox]
+application-id='firefox.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-control-center]
 application-id='gnome-control-center.desktop'
@@ -749,6 +815,7 @@ application-id='mongodb-compass.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-fileroller]
 application-id='org.gnome.FileRoller.desktop'
+enable=true
 
 [org/gnome/desktop/notifications/application/org-gnome-gedit]
 application-id='org.gnome.gedit.desktop'
@@ -778,6 +845,9 @@ application-id='spotify.desktop'
 [org/gnome/desktop/notifications/application/steam]
 application-id='steam.desktop'
 
+[org/gnome/desktop/notifications/application/transmission-gtk]
+application-id='transmission-gtk.desktop'
+
 [org/gnome/desktop/notifications/application/virt-manager]
 application-id='virt-manager.desktop'
 
@@ -793,18 +863,23 @@ two-finger-scrolling-enabled=true
 
 [org/gnome/desktop/privacy]
 disable-microphone=false
+old-files-age=uint32 30
+recent-files-max-age=-1
+remember-recent-files=false
+remove-old-temp-files=true
+remove-old-trash-files=true
 report-technical-problems=true
 
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
 lock-delay=uint32 0
 picture-options='zoom'
-picture-uri='file:///home/vieko/.local/share/backgrounds/2022-01-20-15-44-10-macOS-Monterey-Apple-Stock-Wallpaper-still-2.jpg'
+picture-uri='file:///home/vieko/.local/share/backgrounds/2021-02-15-17-55-12-pawel-czerwinski-n3cF0fLmZaI-unsplash.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
 [org/gnome/desktop/search-providers]
-disabled=['org.gnome.Photos.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.seahorse.Application.desktop']
+disabled=['org.gnome.Photos.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Epiphany.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Nautilus.desktop']
 enabled=@as []
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 
@@ -836,8 +911,10 @@ unmaximize=@as []
 action-double-click-titlebar='none'
 mouse-button-modifier='<Alt>'
 titlebar-font='Fira Sans SemiBold 10'
+visual-bell=false
 
 [org/gnome/eog/ui]
+image-gallery=true
 sidebar=false
 
 [org/gnome/eog/view]
@@ -847,13 +924,13 @@ use-background-color=true
 [org/gnome/epiphany/state]
 is-maximized=false
 window-position=(-1, -1)
-window-size=(1024, 768)
+window-size=(1268, 1424)
 
 [org/gnome/evince]
 document-directory=@ms 'file:///home/vieko/Downloads'
 
 [org/gnome/evince/default]
-window-ratio=(2.0915032679738563, 1.6376262626262625)
+window-ratio=(1.2282118581331178, 1.1777373982098391)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -872,16 +949,16 @@ sort-type='ascending'
 
 [org/gnome/file-roller/ui]
 sidebar-width=200
-window-height=661
-window-width=630
+window-height=1369
+window-width=2560
 
 [org/gnome/gedit/plugins]
 active-plugins=['filebrowser', 'time', 'docinfo', 'spell', 'modelines']
 
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
-tree-view=true
-virtual-root='file:///home/vieko/Downloads'
+tree-view=false
+virtual-root='file:///home/vieko/.cache/.fr-l6YUEl/twitch-cli_1.1.6_Linux_x86_64'
 
 [org/gnome/gedit/preferences/editor]
 highlight-current-line=false
@@ -893,11 +970,14 @@ wrap-last-split-mode='word'
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
 
+[org/gnome/gedit/state/file-chooser]
+open-recent=false
+
 [org/gnome/gedit/state/window]
 bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
-size=(1268, 661)
+size=(820, 1353)
 state=87168
 
 [org/gnome/gnome-screenshot]
@@ -920,11 +1000,11 @@ network-total-in-bits=false
 show-dependencies=false
 show-whose-processes='user'
 update-interval=3000
-window-state=(1298, 1011, 2663, 398)
+window-state=(1588, 1400, 8, 32)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
-col-6-width=888
+col-6-width=0
 
 [org/gnome/gnome-system-monitor/proctree]
 col-0-visible=true
@@ -962,15 +1042,24 @@ default-visible-columns=['name', 'size', 'date_modified', 'starred']
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='list-view'
+migrated-gtk-settings=true
 search-filter-time-type='last_modified'
 search-view='icon-view'
 
 [org/gnome/nautilus/window-state]
-initial-size=(1268, 708)
+initial-size=(2560, 1416)
 maximized=false
-sidebar-width=429
+sidebar-width=171
+
+[org/gnome/nm-applet/eap/0c1edcc0-6355-43f3-b0cd-a593e2a3a234]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
 
 [org/gnome/nm-applet/eap/2af1a527-b478-41dd-b5ae-6bfce7f85a95]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/3325f424-0262-4d03-a8bc-8417c455478a]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
@@ -978,16 +1067,41 @@ ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[org/gnome/nm-applet/eap/85c39ef6-e8c6-4f52-9e9c-b23d91cc09e8]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/9e5258cf-132a-496a-97c4-8d4f5581e52c]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/a095db05-5587-4b83-9dfe-947655aa8d0a]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/b980bbd4-7734-4307-a4f6-8f7c0a87dd31]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/c513ab20-c64f-48a2-9606-70c990614e2a]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
-night-light-last-coordinates=(50.865598560115188, -114.19580000000001)
-night-light-temperature=uint32 4012
+night-light-last-coordinates=(50.829601439884811, -114.19580000000001)
+night-light-temperature=uint32 4021
 
 [org/gnome/settings-daemon/plugins/media-keys]
 control-center=['<Super>comma']
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 home=['<Super>f']
+next=['AudioNext']
+play=['AudioPlay']
+previous=['AudioPrev']
 screensaver=['<Super>Escape']
+volume-down=['AudioLowerVolume']
+volume-up=['AudioRaiseVolume']
 www=['<Super>b']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
@@ -1004,9 +1118,9 @@ enabled-connections=@as []
 
 [org/gnome/shell]
 app-picker-view=uint32 1
-command-history=['rs', 'rt', 's', 'r']
+command-history=['rs', 'rt', 's', 'pkill', 'lg', 'r']
 disable-user-extensions=false
-disabled-extensions=['color-picker@tuberry', 'window-list@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'unite@hardpixel.eu', 'user-theme@gnome-shell-extensions.gcampax.github.com']
+disabled-extensions=['color-picker@tuberry', 'window-list@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'unite@hardpixel.eu', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['sound-output-device-chooser@kgshank.net', 'pop-shell@system76.com', 'just-perfection-desktop@just-perfection']
 favorite-apps=['org.gnome.Nautilus.desktop', 'spotify.desktop', 'slack.desktop', 'discord.desktop']
 welcome-dialog-last-shown-version='41.1'
@@ -1017,40 +1131,62 @@ menu-style=uint32 0
 [org/gnome/shell/extensions/just-perfection]
 accessibility-menu=false
 activities-button=false
+activities-button-icon-monochrome=false
+activities-button-label=false
 aggregate-menu=true
+animation=0
 app-menu=false
 app-menu-icon=false
-background-menu=true
+app-menu-label=false
+background-menu=false
+calendar=true
 clock-menu=true
-clock-menu-position=1
-dash=true
-dash-icon-size=32
-double-super-to-appgrid=true
+clock-menu-position=2
+controls-manager-spacing-size=0
+dash=false
+dash-icon-size=16
+dash-separator=false
+double-super-to-appgrid=false
+events-button=false
 gesture=true
 hot-corner=true
-notification-banner-position=2
+keyboard-layout=false
+notification-banner-position=1
 osd=true
 panel=false
 panel-arrow=false
 panel-corner-size=1
+panel-icon-size=0
 panel-in-overview=true
+panel-notification-icon=false
+panel-size=0
+power-icon=false
+quick-settings=false
 ripple-box=false
+screen-recording-indicator=false
+screen-sharing-indicator=false
 search=false
 show-apps-button=false
 startup-status=0
+switcher-popup-delay=false
 theme=true
+type-to-search=false
 window-demands-attention-focus=true
 window-picker-icon=false
-window-preview-caption=true
+window-preview-caption=false
+window-preview-close-button=false
 workspace=false
-workspace-background-corner-size=0
+workspace-background-corner-size=1
 workspace-popup=true
+workspace-switcher-should-show=false
+workspace-wrap-around=false
 workspaces-in-app-grid=false
 
 [org/gnome/shell/extensions/pop-shell]
 active-hint=false
+active-hint-border-radius=uint32 5
 log-level=uint32 1
-show-skip-taskbar=true
+show-skip-taskbar=false
 show-title=false
 smart-gaps=true
 tile-by-default=true
@@ -1090,7 +1226,11 @@ automatic-location=true
 locations=[<(uint32 2, <('Calgary', 'CYYC', true, [(0.89215414179553232, -1.9899662412999655)], [(0.89157235374267252, -1.9911297824991001)])>)>, <(uint32 2, <('Calgary-Springbank Airport', 'CYBW', false, [(0.89186324776910242, -1.9960748936819459)], @a(dd) [])>)>, <(uint32 2, <('Calgary International', 'CYYC', false, [(0.89215414179553232, -1.9899662412999655)], @a(dd) [])>)>]
 
 [org/gnome/shell/world-clocks]
-locations=[<(uint32 2, <('Seattle', 'KBFI', true, [(0.82983133145337307, -2.134775231953554)], [(0.83088509144255718, -2.135097419733472)])>)>, <(uint32 2, <('Austin', 'KATT', true, [(0.52912565738071171, -1.7063502378508868)], [(0.5282614750548793, -1.7059382354276611)])>)>, <(uint32 2, <('Montreal', 'CYUL', true, [(0.79354303905785273, -1.2871803233458181)], [(0.79354303905785273, -1.2871803233458181)])>)>, <(uint32 2, <('London', 'EGWU', false, [(0.89971722940307675, -0.007272211034407213)], [(0.89971722940307675, -0.007272211034407213)])>)>, <(uint32 2, <('Oslo', 'ENGM', true, [(1.0506882097005865, 0.19344065294494067)], [(1.0457431159710333, 0.18762289458939041)])>)>, <(uint32 2, <('Sydney', 'YSSY', true, [(-0.59253928105207498, 2.6386469349889961)], [(-0.59137572239964786, 2.6392287230418559)])>)>]
+locations=[<(uint32 2, <('Seattle', 'KBFI', true, [(0.82983133145337307, -2.134775231953554)], [(0.83088509144255718, -2.135097419733472)])>)>, <(uint32 2, <('Austin', 'KATT', true, [(0.52912565738071171, -1.7063502378508868)], [(0.5282614750548793, -1.7059382354276611)])>)>, <(uint32 2, <('Montreal', 'CYUL', true, [(0.79354303905785273, -1.2871803233458181)], [(0.79354303905785273, -1.2871803233458181)])>)>, <(uint32 2, <('London', 'EGWU', false, [(0.89971722940307675, -0.007272211034407213)], [(0.89971722940307675, -0.007272211034407213)])>)>, <(uint32 2, <('Oslo', 'ENGM', false, [(1.0506882097005865, 0.19344065294494067)], [(1.0506882097005865, 0.19344065294494067)])>)>, <(uint32 2, <('Sydney', 'YSSY', true, [(-0.59253928105207498, 2.6386469349889961)], [(-0.59137572239964786, 2.6392287230418559)])>)>]
+
+[org/gnome/software]
+check-timestamp=int64 1665760855
+first-run=false
 
 [org/gnome/system/location]
 enabled=true
@@ -1098,12 +1238,41 @@ enabled=true
 [org/gnome/terminal/legacy]
 theme-variant='dark'
 
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-color='rgb(39,41,56)'
+cursor-background-color='rgb(240,104,151)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(39,41,56)'
+font='MonoLisa 12'
+foreground-color='rgb(222,224,239)'
+highlight-background-color='rgb(49,51,66)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(39,41,56)'
+palette=['rgb(54,56,71)', 'rgb(209,145,143)', 'rgb(170,201,212)', 'rgb(237,213,214)', 'rgb(112,155,189)', 'rgb(163,146,220)', 'rgb(160,182,232)', 'rgb(222,224,239)', 'rgb(107,109,124)', 'rgb(209,145,143)', 'rgb(170,201,212)', 'rgb(237,213,214)', 'rgb(112,155,189)', 'rgb(163,146,220)', 'rgb(160,182,232)', 'rgb(222,224,239)']
+scrollbar-policy='never'
+use-system-font=false
+use-theme-colors=false
+visible-name='Vieko'
+
 [org/gnome/tweaks]
 show-extensions-notice=false
 
+[org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+show-type-column=true
+sidebar-width=158
+sort-column='modified'
+sort-directories-first=false
+sort-order='descending'
+type-format='category'
+window-size=(1169, 685)
+
 [org/gtk/settings/color-chooser]
-custom-colors=[(0.6705882352941176, 0.094117647058823528, 0.32156862745098042, 1.0), (1.0, 0.0, 0.95999999999999996, 1.0), (0.0, 1.0, 0.0, 1.0), (0.17647058823529413, 0.49019607843137253, 0.70196078431372544, 1.0), (0.94668497749294267, 0.085572594796673535, 0.085572594796673535, 1.0), (0.90196078431372551, 0.74509803921568629, 1.0, 1.0), (0.0, 0.0, 0.45882352941176469, 1.0), (0.27450980392156865, 0.59999999999999998, 0.56470588235294117, 1.0)]
-selected-color=(true, 0.6705882352941176, 0.094117647058823528, 0.32156862745098042, 1.0)
+custom-colors=[(0.94117647058823528, 0.40784313725490196, 0.59215686274509816, 1.0), (0.098039215686274508, 0.11764705882352941, 0.16470588235294117, 1.0), (0.098039215686274508, 0.1176470588235294, 0.16470588235294117, 1.0), (0.55294117647058827, 0.5607843137254902, 0.61960784313725492, 1.0), (0.9137254901960784, 0.67843137254901964, 0.047058823529411764, 1.0), (0.92941176470588238, 0.83529411764705885, 0.83921568627450982, 1.0), (0.63529411764705879, 0.45098039215686275, 0.29803921568627451, 1.0), (0.81960784313725488, 0.56862745098039214, 0.5607843137254902, 1.0)]
+selected-color=(true, 0.94117647058823528, 0.40784313725490196, 0.59215686274509816, 1.0)
 
 [org/gtk/settings/file-chooser]
 clock-format='24h'
@@ -1117,12 +1286,12 @@ sort-column='modified'
 sort-directories-first=false
 sort-order='descending'
 type-format='category'
-window-position=(29, 89)
+window-position=(410, 130)
 window-size=(1739, 1132)
 
 [org/virt-manager/virt-manager]
-manager-window-height=403
-manager-window-width=372
+manager-window-height=458
+manager-window-width=704
 system-tray=false
 xmleditor-enabled=true
 
@@ -1165,5 +1334,5 @@ vm-window-size=(819, 695)
 [org/virt-manager/virt-manager/vms/e265cabc0e9c435088fe2cb7a1b98825]
 vm-window-size=(1268, 695)
 
-[system/locale]
-region='en_CA.UTF-8'
+[system/proxy]
+mode='none'
