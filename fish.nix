@@ -78,8 +78,7 @@ in {
       beekeeper = "nohup appimage-run ~/AppImages/Beekeeper-Studio-Ultimate-3.8.9.AppImage >/dev/null 2>&1 &disown";
       syncthing = "nohup syncthing >/dev/null 2>&1 & disown";
       sabnzbd   = "nohup sabnzbd >/dev/null 2>&1 & disown";
-      pico8     = "nohup nix-shell ~/Applications/pico-8/ >/dev/null 2>&1 &
-      disown";
+      pico8     = "nohup nix-shell ~/Applications/pico-8/ >/dev/null 2>&1 & disown";
     };
     shellInit  = '' set fish_greeting '';
   };
