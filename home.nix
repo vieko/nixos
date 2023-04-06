@@ -48,6 +48,7 @@ let
   ];
 
   defaultPkgs = with pkgs; [
+    etcher
     protonvpn-gui
     protonvpn-cli
     # pico8-shell
